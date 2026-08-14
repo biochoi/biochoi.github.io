@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: 충남대학교 응용화학공학과 | Biomolecular Engineering Laboratory
+subtitle: Biomolecular Engineering Laboratory at Chungnam National University
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>충남대학교 응용화학공학과</p>
-    <p>대전광역시 유성구 대학로 99</p>
-    <p>biochoi@cnu.ac.kr</p>
+    <p>Department of Chemical Engineering and Applied Chemistry</p>
+    <p>99 Daehak-ro(St), Yuseong-gu, Daejeon, 34134, Korea</p>
+    <p>E-mail: biochoi@cnu.ac.kr</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
