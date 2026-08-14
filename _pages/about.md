@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Department of Chemical Engineering and Applied Chemistry</p>
+    <p>Dept of Chem Eng & Appl Chem</p>
     <p>99 Daehak-ro(St), Yuseong-gu, Daejeon, 34134, Korea</p>
     <p>E-mail: biochoi@cnu.ac.kr</p>
 
