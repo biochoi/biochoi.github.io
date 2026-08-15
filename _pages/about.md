@@ -10,7 +10,6 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
 
-more_info: >
     <p>Prof. Yoo Seong Choi</p>
     <p>biochoi@cnu.ac.kr</p>
     <p>Engineering Bldg. 1, Room 152</p>
