@@ -28,7 +28,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-<div style="font-size: 1.35rem; font-weight: 700; line-height: 1.3; color: #1a3a6b; margin-bottom: 0.5rem;">
+<div style="font-size: 1.55rem; font-weight: 700; line-height: 1.3; color: #1a3a6b; margin-bottom: 0.5rem;">
 Designing Biomolecules. Engineering Biosystems.
 </div>
 
