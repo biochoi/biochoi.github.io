@@ -11,9 +11,9 @@ profile:
   more_info: >
 
     <p>Prof. Yoo Seong Choi</p>
-    <p>biochoi@cnu.ac.kr</p>
-    <p>Engineering Bldg. 1, Room 152</p>
-    <p>99 Daehak-ro, Yuseong-gu, Daejeon 34134</p>
+    <p>E-mail: biochoi@cnu.ac.kr</p>
+    <p>Engineering Bldg. 1, Room 152, CNU</p>
+    <p>99 Daehak-ro, Yuseong-gu, Daejeon 34134, South Korea</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
