@@ -29,11 +29,11 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-<div style="display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; margin-bottom: 2rem;">
-  <img src="/assets/img/Logo.png" alt="BioMol Lab Logo" style="width: 200px; height: auto;">
-  <div>
-    <div style="font-size: 1.8rem; font-weight: 700; line-height: 1.2;">BioMolE Lab at CNU</div>
-    <div style="font-size: 1rem; color: var(--global-text-color-light); margin-top: 0.3rem;">Biomolecular Engineering Laboratory at Chungnam National University</div>
+<div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem;">
+  <img src="/assets/img/Logo.png" alt="BioMol Lab Logo" style="width: 230px; height: auto;">
+  <div style="font-size: 1.05rem; color: var(--global-text-color-light); line-height: 1.5;">
+    Department of Chemical Engineering and Applied Chemistry<br>
+    Chungnam National University
   </div>
 </div>
 
