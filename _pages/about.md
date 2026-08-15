@@ -1,6 +1,6 @@
 ---
 layout: about
-title: 
+title: Biomolecular Engineering Laboratory at Chungnam National University
 permalink: /
 subtitle: 
 
