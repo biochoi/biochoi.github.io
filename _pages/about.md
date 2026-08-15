@@ -6,7 +6,7 @@ subtitle: Biomolecular Engineering Laboratory at Chungnam National University
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: Prof.YS_CHOI.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
 
