@@ -1,6 +1,6 @@
 ---
 layout: about
-title: BiomolE Lab at CNU
+title: BioMolE Lab at CNU
 permalink: /
 subtitle: 
 
