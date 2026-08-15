@@ -1,8 +1,8 @@
 ---
 layout: about
-title: about
+title: 
 permalink: /
-subtitle: Biomolecular Engineering Laboratory at Chungnam National University
+subtitle: 
 
 profile:
   align: right
@@ -28,6 +28,14 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
+
+<div style="display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; margin-bottom: 2rem;">
+  <img src="/assets/img/logo.png" alt="BioMol Lab Logo" style="width: 200px; height: auto;">
+  <div>
+    <div style="font-size: 1.8rem; font-weight: 700; line-height: 1.2;">BioMolE Lab at CNU</div>
+    <div style="font-size: 1rem; color: var(--global-text-color-light); margin-top: 0.3rem;">Biomolecular Engineering Laboratory at Chungnam National University</div>
+  </div>
+</div>
 
 <div style="font-size: 1.55rem; font-weight: 700; line-height: 1.3; color: #1a3a6b; margin-bottom: 0.5rem;">
 Designing Biomolecules. Engineering Biosystems.
