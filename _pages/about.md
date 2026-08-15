@@ -30,11 +30,11 @@ latest_posts:
 ---
 
 <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem;">
-  <img src="/assets/img/Logo.png" alt="BioMol Lab Logo" style="width: 230px; height: auto;">
-  <div style="font-size: 1.05rem; color: var(--global-text-color-light); line-height: 1.5;">
-    Department of Chemical Engineering and Applied Chemistry<br>
-    Chungnam National University
-  </div>
+<img src="/assets/img/Logo.png" alt="BioMol Lab Logo" style="width: 230px; height: auto;">
+<div style="font-size: 1.05rem; color: var(--global-text-color-light); line-height: 1.5;">
+Department of Chemical Engineering and Applied Chemistry<br>
+Chungnam National University
+</div>
 </div>
 
 <div style="font-size: 1.55rem; font-weight: 700; line-height: 1.3; color: #1a3a6b; margin-bottom: 0.5rem;">
