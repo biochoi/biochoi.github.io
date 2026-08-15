@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Dept of Chem Eng & Appl Chem</p>
+    <p>Dept. of Chem. Eng. & Appl. Chem.</p>
     <p>99 Daehak-ro(St), Yuseong-gu, Daejeon, 34134, Korea</p>
     <p>E-mail: biochoi@cnu.ac.kr</p>
 
@@ -27,8 +27,14 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+<div style="font-size: 2rem; font-weight: 700; line-height: 1.3; margin-bottom: 0.5rem;">
+Designing Biomolecules. Engineering Biosystems.
+</div>
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+<div style="font-size: 1.15rem; font-weight: 400; color: var(--global-text-color-light); line-height: 1.5; margin-bottom: 2rem;">
+From molecular interactions and biomolecular organization to catalysis, transport, and bioprocesses.
+</div>
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+At the **BioMolE Lab**, we study and engineer biological function at multiple levels—from protein sequences and molecular interactions to biomolecular assemblies, cells, and bioprocesses. We investigate how sequence-dependent molecular interactions drive coacervation, phase separation, and interfacial reorganization, and how the resulting microenvironments affect biomolecular organization and catalytic activity. We also discover and engineer enzymes for biocatalysis and examine how interfacial and mass-transfer processes influence biological systems and bioprocess performance.
+
+By combining protein engineering, quantitative biophysics, synthetic biology, and bioprocess engineering, we develop biomolecular platforms for functional biomaterials and biocatalysis and improve bioprocess efficiency. Our goal is to understand the underlying mechanisms, use that knowledge for rational design, and develop useful technologies.
