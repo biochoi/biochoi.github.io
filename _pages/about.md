@@ -10,6 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
 
+    <p>Prof. Yoo Seong Choi</p>
     <p>Dept. of Chem. Eng. & Appl. Chem.</p>
     <p>Chungnam National University</p>
     <p>99 Daehak-ro(St), Yuseong-gu, Daejeon, 34134, Korea</p>
