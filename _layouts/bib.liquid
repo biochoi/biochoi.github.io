@@ -5,9 +5,9 @@
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}
         {%- if site.data.venues[entry.abbr] -%}
-          {% assign venue_style = 'style="white-space:normal;word-break:break-word;overflow:visible;height:auto;line-height:1.25;padding-top:0.35em;padding-bottom:0.35em;"' %}
+          {% assign venue_style = 'style="white-space:normal;word-break:break-word;overflow:visible;height:auto;line-height:1.25;padding-top:0.35em;padding-bottom:0.35em;min-height:calc(2.5em + 0.7em);display:flex;align-items:center;justify-content:center;text-align:center;"' %}
           {% if site.data.venues[entry.abbr].color != blank %}
-            {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="white-space:normal;word-break:break-word;overflow:visible;height:auto;line-height:1.25;padding-top:0.35em;padding-bottom:0.35em;background-color:' | append: '"' %}
+            {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="white-space:normal;word-break:break-word;overflow:visible;height:auto;line-height:1.25;padding-top:0.35em;padding-bottom:0.35em;min-height:calc(2.5em + 0.7em);display:flex;align-items:center;justify-content:center;text-align:center;background-color:' | append: '"' %}
           {%- endif -%}
           <abbr
             class="badge rounded w-100"
@@ -22,7 +22,7 @@
             {% endif %}
           </abbr>
         {% else %}
-          <abbr class="badge rounded w-100" style="white-space:normal;word-break:break-word;overflow:visible;height:auto;line-height:1.25;padding-top:0.35em;padding-bottom:0.35em;">{{ entry.abbr }}</abbr>
+          <abbr class="badge rounded w-100" style="white-space:normal;word-break:break-word;overflow:visible;height:auto;line-height:1.25;padding-top:0.35em;padding-bottom:0.35em;min-height:calc(2.5em + 0.7em);display:flex;align-items:center;justify-content:center;text-align:center;">{{ entry.abbr }}</abbr>
         {% endif %}
       {% endif %}
       {% if entry.preview %}
