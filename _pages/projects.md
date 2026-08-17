@@ -2,10 +2,12 @@
 layout: page
 title: Research
 permalink: /research/
-description: '<span style="font-size:1.35rem; font-weight:500; color:var(--global-theme-color);">From Molecular Interactions to Engineering Applications</span>'
+description:
 nav: true
 nav_order: 1
 ---
+
+<div markdown="0" style="text-align:center; font-size:1.4rem; font-weight:500; color:var(--global-theme-color); margin:-0.5rem 0 2rem; line-height:1.4;">From Molecular Interactions to Engineering Applications</div>
 
 <div markdown="0" style="margin-bottom: 2rem;"><img src="/assets/img/research_1.jpg" alt="BioMolE Lab research overview" style="width: 100%; height: auto; border-radius: 6px;"></div>
 
@@ -94,7 +96,7 @@ BioMolE Lab studies how molecular interactions affect biomolecular organization,
 
 The experimental systems differ, but our research follows the same basic process:
 
-<div markdown="0" style="border-left: 4px solid var(--global-theme-color); padding: 1rem 1.2rem; margin: 1.2rem 0; background: rgba(0,0,0,0.02); font-size: 1.15rem; font-weight: 600; letter-spacing: 0.02em;">Understand &nbsp;→&nbsp; Measure &nbsp;→&nbsp; Design &nbsp;→&nbsp; Test</div>
+<div markdown="0" style="display:flex; align-items:stretch; justify-content:center; gap:0.6rem; flex-wrap:wrap; margin:1.6rem 0 1.8rem;"><div style="flex:1 1 120px; min-width:110px; text-align:center; padding:1rem 0.5rem; border:2px solid var(--global-theme-color); border-radius:8px; font-weight:600; font-size:1.05rem; color:var(--global-theme-color); background:rgba(27,94,32,0.04);">Understand<div style="font-size:0.78rem; font-weight:400; color:var(--global-text-color-light); margin-top:0.35rem; line-height:1.3;">mechanism</div></div><div style="flex:0 0 auto; font-size:1.5rem; color:var(--global-theme-color); font-weight:700; line-height:1;">&rarr;</div><div style="flex:1 1 120px; min-width:110px; text-align:center; padding:1rem 0.5rem; border:2px solid var(--global-theme-color); border-radius:8px; font-weight:600; font-size:1.05rem; color:var(--global-theme-color); background:rgba(27,94,32,0.04);">Measure<div style="font-size:0.78rem; font-weight:400; color:var(--global-text-color-light); margin-top:0.35rem; line-height:1.3;">system behavior</div></div><div style="flex:0 0 auto; font-size:1.5rem; color:var(--global-theme-color); font-weight:700; line-height:1;">&rarr;</div><div style="flex:1 1 120px; min-width:110px; text-align:center; padding:1rem 0.5rem; border:2px solid var(--global-theme-color); border-radius:8px; font-weight:600; font-size:1.05rem; color:var(--global-theme-color); background:rgba(27,94,32,0.04);">Design<div style="font-size:0.78rem; font-weight:400; color:var(--global-text-color-light); margin-top:0.35rem; line-height:1.3;">engineering strategy</div></div><div style="flex:0 0 auto; font-size:1.5rem; color:var(--global-theme-color); font-weight:700; line-height:1;">&rarr;</div><div style="flex:1 1 120px; min-width:110px; text-align:center; padding:1rem 0.5rem; border:2px solid var(--global-theme-color); border-radius:8px; font-weight:600; font-size:1.05rem; color:var(--global-theme-color); background:rgba(27,94,32,0.04);">Test<div style="font-size:0.78rem; font-weight:400; color:var(--global-text-color-light); margin-top:0.35rem; line-height:1.3;">intended function</div></div></div>
 
 We first identify the main molecular or transport mechanism. We then measure its effect, design an engineering strategy, and test whether the intended function is achieved.
 
