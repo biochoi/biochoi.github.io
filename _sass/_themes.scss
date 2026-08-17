@@ -12,11 +12,16 @@
   --global-text-color-light: #{v.$grey-color};
   --global-theme-color: #1a4d3e;
   --global-hover-color: #1a4d3e;
+  /* Join Us 페이지 — 글자색 / 선·배경색 */
   --joinus-accent: #1a3a6b;
-  --joinus-c2: #22577a;
-  --joinus-c3: #2a6f97;
-  --joinus-c4: #38618c;
-  --joinus-c5: #16456b;
+  --joinus-line: #1a3a6b;
+  --joinus-line2: #22577a;
+  --joinus-line3: #2a6f97;
+  --joinus-line4: #38618c;
+  --joinus-line5: #16456b;
+  /* 상단 제목 바 배경 */
+  --navbar-title-bg: #eef2f6;
+  --navbar-title-border: rgba(0, 0, 0, 0.09);
   --global-hover-text-color: #{v.$white-color};
   --global-footer-bg-color: #{v.$grey-color-dark};
   --global-footer-text-color: #{v.$grey-color-light};
@@ -87,11 +92,16 @@ html[data-theme="dark"] {
   --global-text-color-light: #{v.$grey-color};
   --global-theme-color: #57b26b;
   --global-hover-color: #57b26b;
+  /* Join Us 페이지 — 글자색 / 선·배경색 */
   --joinus-accent: #8ab4e8;
-  --joinus-c2: #7fc4e0;
-  --joinus-c3: #79cdf0;
-  --joinus-c4: #9cc0ea;
-  --joinus-c5: #8bb8e6;
+  --joinus-line: #2c4f7c;
+  --joinus-line2: #2f5f80;
+  --joinus-line3: #35708f;
+  --joinus-line4: #3d6a94;
+  --joinus-line5: #2a5580;
+  /* 상단 제목 바 배경 */
+  --navbar-title-bg: #23282d;
+  --navbar-title-border: rgba(255, 255, 255, 0.10);
   --global-hover-text-color: #{v.$white-color};
   --global-footer-bg-color: #{v.$grey-color-light};
   --global-footer-text-color: #{v.$grey-color-dark};
@@ -217,11 +227,11 @@ html[data-theme-setting="light"] {
   color: var(--global-theme-color);
 }
 
+
 /* -----------------------------------------------------------------------------
-   상단 네비게이션 정리
+   상단 네비게이션 (사용자 추가)
    ----------------------------------------------------------------------------- */
 
-/* 모든 페이지에서 세로 2단 구조 강제 */
 .navbar > .container {
   display: flex !important;
   flex-direction: column !important;
@@ -230,31 +240,31 @@ html[data-theme-setting="light"] {
   padding-bottom: 0 !important;
 }
 
-/* 1단: 사이트 제목 — 옅은 배경 */
+/* 1단: 사이트 제목 */
 .navbar .navbar-brand.title {
+  display: block !important;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0.7rem 1rem 0.6rem !important;
   font-weight: 700 !important;
   font-size: 1.25rem;
   letter-spacing: -0.01em;
-  margin: 0 !important;
-  padding: 0.65rem 1rem 0.55rem !important;
   text-align: right;
-  width: 100%;
-  background: var(--global-code-bg-color);
-  border-bottom: 1px solid var(--global-divider-color);
+  background: var(--navbar-title-bg);
+  border-bottom: 1px solid var(--navbar-title-border);
 }
 
 /* 2단: 메뉴 */
 .navbar .navbar-collapse {
   flex-grow: 0;
-  border-left: none;
-  padding: 0.35rem 1rem 0.4rem !important;
   width: 100%;
+  padding: 0.4rem 1rem 0.45rem !important;
   justify-content: flex-end;
 }
 
 .navbar .navbar-nav {
-  justify-content: flex-end;
   width: 100%;
+  justify-content: flex-end;
 }
 
 .navbar .nav-link {
@@ -266,6 +276,6 @@ html[data-theme-setting="light"] {
 @media (max-width: 640px) {
   .navbar .navbar-brand.title {
     font-size: 1.05rem;
-    padding: 0.5rem 0.8rem !important;
+    padding: 0.55rem 0.8rem !important;
   }
 }
