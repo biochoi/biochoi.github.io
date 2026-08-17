@@ -218,45 +218,51 @@ html[data-theme-setting="light"] {
 }
 
 /* -----------------------------------------------------------------------------
-   상단 네비게이션 정리 (A안 + B안)
+   상단 네비게이션 정리
    ----------------------------------------------------------------------------- */
 
 .navbar > .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 0.6rem;
+  padding-bottom: 0.4rem;
 }
 
-/* 사이트 제목 — 크고 굵게 */
+/* 사이트 제목 */
 .navbar .navbar-brand.title {
   font-weight: 700 !important;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   letter-spacing: -0.01em;
-  margin-right: auto;
-  padding-left: 0;
+  margin: 0 0 0.15rem 0;
+  padding: 0;
+  text-align: right;
 }
 
-/* 메뉴 영역 — 작게 + 왼쪽 세로 구분선 */
+/* 메뉴 */
 .navbar .navbar-collapse {
   flex-grow: 0;
-  border-left: 1px solid var(--global-divider-color);
-  padding-left: 1.2rem;
+  border-left: none;
+  padding-left: 0;
+  justify-content: flex-end;
+}
+
+.navbar .navbar-nav {
+  justify-content: flex-end;
 }
 
 .navbar .nav-link {
   font-size: 0.95rem;
-  padding-left: 0.7rem !important;
-  padding-right: 0.7rem !important;
+  padding-left: 0.65rem !important;
+  padding-right: 0.65rem !important;
 }
 
-/* 좁은 화면 대응 */
+/* 오른쪽 끝 여백 정리 */
+.navbar .navbar-nav .nav-item:last-child .nav-link {
+  padding-right: 0 !important;
+}
+
 @media (max-width: 640px) {
   .navbar .navbar-brand.title {
     font-size: 1.05rem;
-  }
-  .navbar .navbar-collapse {
-    border-left: none;
-    padding-left: 0;
   }
 }
