@@ -221,33 +221,40 @@ html[data-theme-setting="light"] {
    상단 네비게이션 정리
    ----------------------------------------------------------------------------- */
 
+/* 모든 페이지에서 세로 2단 구조 강제 */
 .navbar > .container {
-  flex-direction: column;
-  align-items: flex-end;
-  padding-top: 0.6rem;
-  padding-bottom: 0.4rem;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
-/* 사이트 제목 */
+/* 1단: 사이트 제목 — 옅은 배경 */
 .navbar .navbar-brand.title {
   font-weight: 700 !important;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   letter-spacing: -0.01em;
-  margin: 0 0 0.15rem 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0.65rem 1rem 0.55rem !important;
   text-align: right;
+  width: 100%;
+  background: var(--global-code-bg-color);
+  border-bottom: 1px solid var(--global-divider-color);
 }
 
-/* 메뉴 */
+/* 2단: 메뉴 */
 .navbar .navbar-collapse {
   flex-grow: 0;
   border-left: none;
-  padding-left: 0;
+  padding: 0.35rem 1rem 0.4rem !important;
+  width: 100%;
   justify-content: flex-end;
 }
 
 .navbar .navbar-nav {
   justify-content: flex-end;
+  width: 100%;
 }
 
 .navbar .nav-link {
@@ -256,13 +263,9 @@ html[data-theme-setting="light"] {
   padding-right: 0.65rem !important;
 }
 
-/* 오른쪽 끝 여백 정리 */
-.navbar .navbar-nav .nav-item:last-child .nav-link {
-  padding-right: 0 !important;
-}
-
 @media (max-width: 640px) {
   .navbar .navbar-brand.title {
     font-size: 1.05rem;
+    padding: 0.5rem 0.8rem !important;
   }
 }
