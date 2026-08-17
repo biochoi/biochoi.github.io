@@ -233,7 +233,9 @@ html[data-theme-setting="light"] {
 
 /* 사이트 제목 숨김 — 메뉴만 한 줄로 */
 .navbar .navbar-brand.title {
-  display: none !important;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
 }
 
 .navbar > .container {
@@ -263,6 +265,6 @@ html[data-theme-setting="light"] {
 /* 메인 페이지 제목 — 한 줄에 들어가도록 축소 */
 .post-title,
 .post-header h1 {
-  font-size: 2rem !important;
+  font-size: 1.75rem !important;
   line-height: 1.25;
 }
