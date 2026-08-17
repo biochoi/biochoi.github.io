@@ -259,3 +259,10 @@ html[data-theme-setting="light"] {
   padding-left: 0.7rem !important;
   padding-right: 0.7rem !important;
 }
+
+/* 메인 페이지 제목 — 한 줄에 들어가도록 축소 */
+.post-title,
+.post-header h1 {
+  font-size: 2rem !important;
+  line-height: 1.25;
+}
