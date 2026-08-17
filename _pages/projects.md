@@ -2,7 +2,7 @@
 layout: page
 title: Research
 permalink: /research/
-description: From Molecular Interactions to Engineering Applications
+description: '<span style="font-size:1.35rem; font-weight:500; color:var(--global-theme-color);">From Molecular Interactions to Engineering Applications</span>'
 nav: true
 nav_order: 1
 ---
@@ -13,9 +13,11 @@ BioMolE Lab studies how molecular interactions affect biomolecular organization,
 
 ---
 
+<div markdown="0" style="height: 2.2rem;"></div>
+
 ## 1. Biomolecular Condensates & Functional Biomaterials
 
-<div markdown="0" style="display: flex; gap: 1.8rem; align-items: flex-start; flex-wrap: wrap; margin: 1.5rem 0;"><div style="flex: 1 1 280px; min-width: 260px;"><img src="/assets/img/research_2.jpg" alt="Acidic IDPs and IDRs" style="width: 100%; height: auto; border-radius: 6px;"></div><div style="flex: 2 1 340px; min-width: 300px; line-height: 1.65;"><p>We study coacervation and phase separation of acidic intrinsically disordered proteins and regions (IDPs/IDRs) and engineered proteins. Using shell-originated acidic and synthetic proteins, we examine how protein sequence, acidic-domain length, charge, pH, salt, and partner proteins affect droplet formation, molecular partitioning, and interfacial reorganization.</p><p>Our research has expanded from simple and complex coacervation and biomineralization to protein-induced core–shell compartments. These studies help us understand how protein interactions control the structure and function of biomolecular condensates.</p></div></div>
+<div markdown="0" style="display: flex; gap: 1.8rem; align-items: flex-start; flex-wrap: wrap; margin: 1.5rem 0;"><div style="flex: 1 1 200px; min-width: 180px; max-width: 300px;"><img src="/assets/img/research_2.jpg" alt="Acidic IDPs and IDRs" style="width: 100%; height: auto; border-radius: 6px;"></div><div style="flex: 2.6 1 340px; min-width: 300px; line-height: 1.7;"><p>We study coacervation and phase separation of acidic intrinsically disordered proteins and regions (IDPs/IDRs) and engineered proteins. Using shell-originated acidic and synthetic proteins, we examine how protein sequence, acidic-domain length, charge, pH, salt, and partner proteins affect droplet formation, molecular partitioning, and interfacial reorganization.</p><p>Our research has expanded from simple and complex coacervation and biomineralization to protein-induced core–shell compartments. These studies help us understand how protein interactions control the structure and function of biomolecular condensates.</p></div></div>
 
 <div markdown="0" style="display: flex; gap: 1.8rem; flex-wrap: wrap; margin-bottom: 1.2rem;"><div style="flex: 1 1 280px;"><div style="font-weight: 600; margin-bottom: 0.3rem;">Representative Systems</div><div style="color: var(--global-text-color-light);">Shell-Inspired &amp; Engineered Synthetic Acidic IDPs/IDRs · Protein Coacervates &amp; Biomolecular Compartments</div></div><div style="flex: 1 1 280px;"><div style="font-weight: 600; margin-bottom: 0.3rem;">Application Relevance</div><div style="color: var(--global-text-color-light);">Design principles for protein-based materials, protein formulation, and compartmentalized reaction systems.</div></div></div>
 
@@ -35,9 +37,11 @@ BioMolE Lab studies how molecular interactions affect biomolecular organization,
 
 ---
 
+<div markdown="0" style="height: 2.2rem;"></div>
+
 ## 2. Enzyme Discovery, Engineering & Biocatalysis
 
-<div markdown="0" style="display: flex; gap: 1.8rem; align-items: flex-start; flex-wrap: wrap; margin: 1.5rem 0;"><div style="flex: 1 1 280px; min-width: 260px;"><img src="/assets/img/research_3.jpg" alt="Marine-derived tyrosinase" style="width: 100%; height: auto; border-radius: 6px;"></div><div style="flex: 2 1 340px; min-width: 300px; line-height: 1.65;"><p>We discover and characterize enzymes with useful catalytic properties. Marine tyrosinases are major model enzymes in our laboratory.</p><p>Using marine-derived tyrosinases and related enzymes, we study enzyme kinetics, substrate specificity, stability, and structure–function relationships. We also use protein engineering to improve enzyme activity and apply the enzymes to biocatalysis, immobilization, and biosensing.</p></div></div>
+<div markdown="0" style="display: flex; gap: 1.8rem; align-items: flex-start; flex-wrap: wrap; margin: 1.5rem 0;"><div style="flex: 1 1 200px; min-width: 180px; max-width: 300px;"><img src="/assets/img/research_3.jpg" alt="Marine-derived tyrosinase" style="width: 100%; height: auto; border-radius: 6px;"></div><div style="flex: 2.6 1 340px; min-width: 300px; line-height: 1.7;"><p>We discover and characterize enzymes with useful catalytic properties. Marine tyrosinases are major model enzymes in our laboratory.</p><p>Using marine-derived tyrosinases and related enzymes, we study enzyme kinetics, substrate specificity, stability, and structure–function relationships. We also use protein engineering to improve enzyme activity and apply the enzymes to biocatalysis, immobilization, and biosensing.</p></div></div>
 
 <div markdown="0" style="display: flex; gap: 1.8rem; flex-wrap: wrap; margin-bottom: 1.2rem;"><div style="flex: 1 1 280px;"><div style="font-weight: 600; margin-bottom: 0.3rem;">Representative Systems</div><div style="color: var(--global-text-color-light);">Marine-Derived Tyrosinases and Related Enzymes</div></div><div style="flex: 1 1 280px;"><div style="font-weight: 600; margin-bottom: 0.3rem;">Application Relevance</div><div style="color: var(--global-text-color-light);">Enzyme products, selective biocatalytic synthesis, enzyme-based analytical systems, and industrial biotechnology.</div></div></div>
 
@@ -58,9 +62,11 @@ BioMolE Lab studies how molecular interactions affect biomolecular organization,
 
 ---
 
+<div markdown="0" style="height: 2.2rem;"></div>
+
 ## 3. Interfaces, Mass Transfer & Bioprocess Engineering
 
-<div markdown="0" style="display: flex; gap: 1.8rem; align-items: flex-start; flex-wrap: wrap; margin: 1.5rem 0;"><div style="flex: 1 1 280px; min-width: 260px;"><img src="/assets/img/research_4.jpg" alt="Organic bionanofluids" style="width: 100%; height: auto; border-radius: 6px;"></div><div style="flex: 2 1 340px; min-width: 300px; line-height: 1.65;"><p>We study how interfaces and mass-transfer processes affect the supply of gases and dissolved substrates in biological systems. We measure transport behavior and relate it to cellular responses and process performance.</p><p>Bionanofluids and bio-derived dispersed materials have been used as representative systems in our gas–liquid mass-transfer studies. Examples include chitosan/oleamide nanofluids and tannic acid–Fe³⁺-coated cellulose nanocrystals. We apply the same approach to different gas-transfer and cultivation systems to identify transport limitations and improve operating conditions.</p></div></div>
+<div markdown="0" style="display: flex; gap: 1.8rem; align-items: flex-start; flex-wrap: wrap; margin: 1.5rem 0;"><div style="flex: 1 1 200px; min-width: 180px; max-width: 300px;"><img src="/assets/img/research_4.jpg" alt="Organic bionanofluids" style="width: 100%; height: auto; border-radius: 6px;"></div><div style="flex: 2.6 1 340px; min-width: 300px; line-height: 1.7;"><p>We study how interfaces and mass-transfer processes affect the supply of gases and dissolved substrates in biological systems. We measure transport behavior and relate it to cellular responses and process performance.</p><p>Bionanofluids and bio-derived dispersed materials have been used as representative systems in our gas–liquid mass-transfer studies. Examples include chitosan/oleamide nanofluids and tannic acid–Fe³⁺-coated cellulose nanocrystals. We apply the same approach to different gas-transfer and cultivation systems to identify transport limitations and improve operating conditions.</p></div></div>
 
 <div markdown="0" style="display: flex; gap: 1.8rem; flex-wrap: wrap; margin-bottom: 1.2rem;"><div style="flex: 1 1 280px;"><div style="font-weight: 600; margin-bottom: 0.3rem;">Representative Systems</div><div style="color: var(--global-text-color-light);">Bionanofluids · Bio-Derived Dispersed Materials · Gas–Liquid Transport &amp; Culture Systems</div></div><div style="flex: 1 1 280px;"><div style="font-weight: 600; margin-bottom: 0.3rem;">Application Relevance</div><div style="color: var(--global-text-color-light);">Fermentation, biological cultivation, process development, and scale-up, especially when gas or substrate supply limits performance.</div></div></div>
 
@@ -82,6 +88,8 @@ BioMolE Lab studies how molecular interactions affect biomolecular organization,
 
 ---
 
+<div markdown="0" style="height: 2.2rem;"></div>
+
 ## Integrated Research Approach
 
 The experimental systems differ, but our research follows the same basic process:
@@ -91,6 +99,8 @@ The experimental systems differ, but our research follows the same basic process
 We first identify the main molecular or transport mechanism. We then measure its effect, design an engineering strategy, and test whether the intended function is achieved.
 
 ---
+
+<div markdown="0" style="height: 2.2rem;"></div>
 
 ## Research Training & Career Paths
 
