@@ -216,3 +216,47 @@ html[data-theme-setting="light"] {
 #light-toggle:hover .fa-half-sun-moon::after {
   color: var(--global-theme-color);
 }
+
+/* -----------------------------------------------------------------------------
+   상단 네비게이션 정리 (A안 + B안)
+   ----------------------------------------------------------------------------- */
+
+.navbar > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* 사이트 제목 — 크고 굵게 */
+.navbar .navbar-brand.title {
+  font-weight: 700 !important;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  margin-right: auto;
+  padding-left: 0;
+}
+
+/* 메뉴 영역 — 작게 + 왼쪽 세로 구분선 */
+.navbar .navbar-collapse {
+  flex-grow: 0;
+  border-left: 1px solid var(--global-divider-color);
+  padding-left: 1.2rem;
+}
+
+.navbar .nav-link {
+  font-size: 0.95rem;
+  padding-left: 0.7rem !important;
+  padding-right: 0.7rem !important;
+}
+
+/* 좁은 화면 대응 */
+@media (max-width: 640px) {
+  .navbar .navbar-brand.title {
+    font-size: 1.05rem;
+  }
+  .navbar .navbar-collapse {
+    border-left: none;
+    padding-left: 0;
+  }
+}
