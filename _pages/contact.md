@@ -8,6 +8,34 @@ nav_order: 6
 ---
 
 <style>
+  /* ══════════════════════════════════════════════════════════
+   * 섹션 제목 — 홈·People 페이지와 동일한 괘선 조판
+   * ══════════════════════════════════════════════════════════ */
+
+  .contact-head {
+    margin: 3.5rem 0 0;
+    padding-bottom: 0.7rem;
+    border-bottom: 2px solid var(--joinus-accent, #1a3a6b);
+    color: var(--joinus-accent, #1a3a6b);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
+
+  .contact-head-ko {
+    margin-left: 0.65rem;
+    color: var(--global-text-color-light);
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
+  /* ══════════════════════════════════════════════════════════
+   * 상단 안내 · 연락처 카드
+   * ══════════════════════════════════════════════════════════ */
+
   .contact-lead {
     margin-bottom: 2rem;
     line-height: 1.8;
@@ -17,7 +45,7 @@ nav_order: 6
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.2rem;
-    margin: 1.5rem 0 1rem;
+    margin: 2rem 0 1rem;
   }
 
   .contact-card {
@@ -27,10 +55,12 @@ nav_order: 6
     background-color: var(--global-card-bg-color);
   }
 
-  .contact-card h2 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
+  .contact-card h3 {
+    margin: 0 0 1rem;
+    color: var(--joinus-accent, #1a3a6b);
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.4;
   }
 
   .contact-card p {
@@ -41,18 +71,27 @@ nav_order: 6
     margin-bottom: 0;
   }
 
-  /* ── 아래 섹션 전용 여백 ───────────────────────── */
+  /* ══════════════════════════════════════════════════════════
+   * 캠퍼스 안내
+   * ══════════════════════════════════════════════════════════ */
 
-  .contact-directions {
-    margin-top: 3.5rem;
-    padding-top: 2.5rem;
-    border-top: 1px solid var(--global-divider-color);
+  .contact-photo {
+    margin: 2rem 0 2.2rem;
   }
 
-  .contact-directions h2 {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    line-height: 1.35;
+  .contact-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .contact-photo figcaption {
+    margin-top: 0.65rem;
+    color: var(--global-text-color-light);
+    font-size: 0.85rem;
+    line-height: 1.6;
   }
 
   .contact-directions p {
@@ -76,7 +115,8 @@ nav_order: 6
     margin: 2.2rem 0 2.6rem;
   }
 
-  .contact-button {
+  .contact-button,
+  .contact-button:visited {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -85,14 +125,14 @@ nav_order: 6
     border: 2px solid var(--global-theme-color);
     border-radius: 8px;
     color: var(--global-theme-color);
+    font-size: 0.92rem;
     font-weight: 600;
     line-height: 1.35;
     text-align: center;
     text-decoration: none;
     transition:
       background-color 0.2s ease,
-      color 0.2s ease,
-      transform 0.2s ease;
+      color 0.2s ease;
   }
 
   .contact-button:hover,
@@ -100,7 +140,6 @@ nav_order: 6
     background-color: var(--global-theme-color);
     color: var(--global-hover-text-color);
     text-decoration: none;
-    transform: translateY(-2px);
   }
 
   .contact-button:focus-visible {
@@ -109,7 +148,7 @@ nav_order: 6
   }
 
   .contact-note {
-    margin-top: 0;
+    margin: 0;
     padding: 1.3rem 1.4rem;
     border-left: 4px solid var(--global-theme-color);
     border-radius: 0 8px 8px 0;
@@ -118,25 +157,42 @@ nav_order: 6
   }
 
   .contact-note p {
-    margin-bottom: 0;
+    margin: 0;
   }
 
   .contact-footnote {
-    margin-top: 3.2rem;
+    margin: 3.2rem 0 2rem;
     padding-top: 2rem;
-    margin-bottom: 2rem;
     border-top: 1px solid var(--global-divider-color);
     line-height: 1.8;
   }
+
+  /* ══════════════════════════════════════════════════════════
+   * 반응형
+   * ══════════════════════════════════════════════════════════ */
 
   @media (max-width: 700px) {
     .contact-grid {
       grid-template-columns: 1fr;
     }
 
-    .contact-directions {
-      margin-top: 2.6rem;
-      padding-top: 2rem;
+    .contact-head {
+      margin-top: 2.8rem;
+      font-size: 1.4rem;
+    }
+
+    .contact-head-ko {
+      font-size: 0.88rem;
+    }
+
+    .contact-photo img {
+      aspect-ratio: 4 / 3;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .contact-button {
+      transition: none;
     }
   }
 </style>
@@ -146,9 +202,13 @@ nav_order: 6
   The BioMolE Lab is located in College of Engineering I (W3) on the Daedeok Campus of Chungnam National University.
 </p>
 
+<h2 class="contact-head">
+  Contact<span class="contact-head-ko" lang="ko">연락처</span>
+</h2>
+
 <div class="contact-grid">
   <section class="contact-card" aria-labelledby="pi-heading">
-    <h2 id="pi-heading">Principal Investigator</h2>
+    <h3 id="pi-heading">Principal Investigator</h3>
 
     <p>
       <strong>Prof. Yoo Seong Choi</strong><br>
@@ -164,7 +224,7 @@ nav_order: 6
   </section>
 
   <section class="contact-card" aria-labelledby="address-heading">
-    <h2 id="address-heading">Address | 주소</h2>
+    <h3 id="address-heading">Address</h3>
 
     <p lang="ko">
       <strong>국문</strong><br>
@@ -184,7 +244,21 @@ nav_order: 6
 </div>
 
 <section class="contact-directions" aria-labelledby="directions-heading">
-  <h2 id="directions-heading">Campus Map &amp; Directions | 캠퍼스 안내</h2>
+  <h2 class="contact-head" id="directions-heading">
+    Campus Map &amp; Directions<span class="contact-head-ko" lang="ko">캠퍼스 안내</span>
+  </h2>
+
+  <figure class="contact-photo">
+    <img
+      src="{{ '/assets/img/eng_bldg_1.jpg' | relative_url }}"
+      alt="충남대학교 공학 1호관(W3) 외관. 건물 상단에 붉은색 W3 공학1호관 표지가 있습니다."
+      loading="lazy"
+    >
+    <figcaption lang="ko">
+      공학 1호관(W3) — 건물 상단의 붉은 <strong>W3</strong> 표지를 기준으로 찾으실 수 있습니다.<br>
+      College of Engineering I (W3), Chungnam National University
+    </figcaption>
+  </figure>
 
   <p class="contact-building">
     <strong>Building code:</strong> W3 — College of Engineering I (공과대학 1호관)
