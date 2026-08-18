@@ -36,45 +36,84 @@ latest_posts:
     }
   }
 
-  /*
-   * Research 영역을 오른쪽 프로필 사진 아래에서 시작시켜
-   * 홈페이지의 전체 본문 폭을 사용하도록 합니다.
-   */
-  .home-research-section {
+  /* ══════════════════════════════════════════════════════════
+   * 공통 섹션 제목
+   *   .home-section-heading  → 본문에 직접 작성한 Research 제목
+   *   .post article > h2     → 테마가 자동 생성하는 News /
+   *                            Selected publications 제목
+   * 두 가지가 같은 모양을 갖도록 규칙을 공유합니다.
+   * ══════════════════════════════════════════════════════════ */
+
+  .home-section-heading,
+  .post article > h2 {
     clear: both;
-    width: 100%;
-    margin: 3.75rem 0 3rem;
+    max-width: none;
+    margin: 3.75rem 0 1.7rem;
+    text-align: left;
   }
 
-  .home-section-heading {
-    max-width: 680px;
-    margin: 0 auto 1.7rem;
-    text-align: center;
-  }
-
-  .home-section-heading h2 {
-    margin: 0;
+  .home-section-heading h2,
+  .post article > h2 {
     color: var(--joinus-accent, #1a3a6b);
     font-size: 1.85rem;
     font-weight: 700;
     line-height: 1.2;
   }
 
-  .home-section-heading p {
+  .home-section-heading h2 {
+    margin: 0;
+  }
+
+  /* 테마가 만든 제목은 소문자라 첫 글자를 대문자로 맞춥니다. */
+  .post article > h2 {
+    text-transform: capitalize;
+  }
+
+  .post article > h2 > a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  /* 국문 부제 */
+  .home-section-heading p,
+  .post article > h2 > a::after {
+    display: block;
     margin: 0.4rem 0 0;
     color: var(--global-text-color-light);
     font-size: 1rem;
+    font-weight: 400;
     line-height: 1.4;
+    text-transform: none;
   }
 
-  .home-section-heading::after {
+  .post article > h2 > a[href$="/news/"]::after {
+    content: "소식";
+  }
+
+  .post article > h2 > a[href$="/publications/"]::after {
+    content: "대표 논문";
+  }
+
+  /* 제목 아래 짧은 강조선 */
+  .home-section-heading::after,
+  .post article > h2::after {
     display: block;
     width: 44px;
     height: 3px;
-    margin: 1rem auto 0;
+    margin: 1rem 0 0;
     border-radius: 999px;
     background: var(--global-theme-color, #1a4d3e);
     content: "";
+  }
+
+  /* ══════════════════════════════════════════════════════════
+   * Research 카드
+   * ══════════════════════════════════════════════════════════ */
+
+  .home-research-section {
+    clear: both;
+    width: 100%;
+    margin: 3.75rem 0 3rem;
   }
 
   .home-research-grid {
@@ -90,7 +129,6 @@ latest_posts:
     display: flex;
     flex-direction: column;
     min-width: 0;
-    min-height: 275px;
     box-sizing: border-box;
     padding: 1.3rem 1.2rem 1.2rem;
     border: 1px solid var(--global-divider-color, #e0e0e0);
@@ -159,7 +197,7 @@ latest_posts:
 
   .home-research-footer {
     margin-top: 1.3rem;
-    text-align: center;
+    text-align: left;
   }
 
   .home-research-link {
@@ -174,9 +212,19 @@ latest_posts:
     text-underline-offset: 4px;
   }
 
-  /*
-   * Join Us 영역
-   */
+  /* ══════════════════════════════════════════════════════════
+   * News / Selected publications 본문 여백
+   * ══════════════════════════════════════════════════════════ */
+
+  .post article > .news,
+  .post article > .publications {
+    margin-bottom: 3rem;
+  }
+
+  /* ══════════════════════════════════════════════════════════
+   * Join Us 배너
+   * ══════════════════════════════════════════════════════════ */
+
   .home-joinus-panel {
     clear: both;
     display: grid;
@@ -252,17 +300,13 @@ latest_posts:
     outline-offset: 3px;
   }
 
-  /*
-   * 중간 크기 화면과 모바일에서는 2개+1개 형태를 사용하지 않고
-   * 카드가 한 줄에 하나씩 나타나도록 합니다.
-   */
+  /* ══════════════════════════════════════════════════════════
+   * 반응형
+   * ══════════════════════════════════════════════════════════ */
+
   @media (max-width: 900px) {
     .home-research-grid {
       grid-template-columns: 1fr;
-    }
-
-    .home-research-card {
-      min-height: 0;
     }
 
     .home-card-title {
@@ -271,11 +315,10 @@ latest_posts:
 
     .home-joinus-panel {
       grid-template-columns: 1fr;
-      text-align: center;
     }
 
     .home-joinus-button {
-      justify-self: center;
+      justify-self: start;
     }
   }
 
@@ -284,7 +327,8 @@ latest_posts:
       margin-top: 3rem;
     }
 
-    .home-section-heading h2 {
+    .home-section-heading h2,
+    .post article > h2 {
       font-size: 1.65rem;
     }
 
