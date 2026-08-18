@@ -5,24 +5,22 @@
 # photo_position is optional and can be adjusted, e.g. "center 20%".
 
 graduate:
-  # - name_en: "Example Graduate Student"
-  #   name_ko: "예시 대학원생"
-  #   role: "Ph.D. Student"
-  #   joined: 2026
-  #   topic: "Sequence-dependent coacervation of intrinsically disordered proteins"
-  #   image: "example-graduate.jpg"
-  #   photo_position: "center 25%"
-  #   initials: "EG"
+   - name_en: "Example Graduate Student"
+     name_ko: "예시 대학원생"
+     role: "Ph.D. Student"
+     topic: "Sequence-dependent coacervation of intrinsically disordered proteins"
+     image: "example-graduate.jpg"
+     photo_position: "center 25%"
+     initials: "EG"
 
 undergraduate:
-  # - name_en: "Example Undergraduate Researcher"
-  #   name_ko: "예시 학부연구생"
-  #   role: "Undergraduate Researcher"
-  #   joined: 2026
-  #   topic: "Interfacial characterization of protein condensates"
-  #   image: "example-undergraduate.jpg"
-  #   photo_position: "center 25%"
-  #   initials: "EU"
+   - name_en: "Example Undergraduate Researcher"
+     name_ko: "예시 학부연구생"
+     role: "Undergraduate Researcher"
+     topic: "Interfacial characterization of protein condensates"
+     image: "example-undergraduate.jpg"
+     photo_position: "center 25%"
+     initials: "EU"
 
 alumni:
   # - name_en: "Example Alumnus"
