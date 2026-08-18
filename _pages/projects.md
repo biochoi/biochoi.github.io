@@ -11,13 +11,85 @@ nav_order: 1
 
 <div markdown="0" style="margin-bottom: 2rem;"><img src="/assets/img/research_1.jpg" alt="BioMolE Lab research overview" style="width: 100%; height: auto; border-radius: 6px;"></div>
 
+<style>
+  .research-jump-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 0 0 2rem;
+  }
+
+  .research-jump-link {
+    display: flex;
+    flex: 1 1 230px;
+    max-width: 285px;
+    min-height: 3.25rem;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--global-theme-color);
+    border-radius: 8px;
+    background-color: var(--global-bg-color);
+    color: var(--global-theme-color);
+    font-size: 0.98rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .research-jump-link:hover,
+  .research-jump-link:focus-visible {
+    background-color: var(--global-theme-color);
+    color: var(--global-bg-color);
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+
+  .research-jump-link:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 3px;
+  }
+
+  .research-section-anchor {
+    scroll-margin-top: 6.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .research-jump-link {
+      flex-basis: 100%;
+      max-width: none;
+    }
+  }
+</style>
+
+<nav class="research-jump-nav" aria-label="Research areas">
+  <a class="research-jump-link" href="#condensates-biomaterials">
+    Condensates &amp; Biomaterials
+  </a>
+
+  <a class="research-jump-link" href="#enzyme-engineering">
+    Enzyme Engineering
+  </a>
+
+  <a class="research-jump-link" href="#biointerfaces-bioprocesses">
+    Biointerfaces &amp; Bioprocesses
+  </a>
+</nav>
+
 BioMolE Lab studies how molecular interactions affect biomolecular organization, catalytic activity, and bioprocess performance. Our research is organized into three connected areas. In each area, we identify the key mechanism, measure system behavior, and use the results for engineering design.
 
 ---
 
 <div markdown="0" style="height: 2.2rem;"></div>
 
-## 1. Biomolecular Condensates & Functional Biomaterials
+<h2 id="condensates-biomaterials" class="research-section-anchor">1. Biomolecular Condensates &amp; Functional Biomaterials</h2>
 
 <div markdown="0" style="display: flex; gap: 1.8rem; align-items: flex-start; flex-wrap: wrap; margin: 1.5rem 0;"><div style="flex: 1 1 200px; min-width: 180px; max-width: 300px;"><img src="/assets/img/research_2.jpg" alt="Acidic IDPs and IDRs" style="width: 100%; height: auto; border-radius: 6px;"></div><div style="flex: 2.6 1 340px; min-width: 300px; line-height: 1.7;"><p>We study coacervation and phase separation of acidic intrinsically disordered proteins and regions (IDPs/IDRs) and engineered proteins. Using shell-originated acidic and synthetic proteins, we examine how protein sequence, acidic-domain length, charge, pH, salt, and partner proteins affect droplet formation, molecular partitioning, and interfacial reorganization.</p><p>Our research has expanded from simple and complex coacervation and biomineralization to protein-induced core–shell compartments. These studies help us understand how protein interactions control the structure and function of biomolecular condensates.</p></div></div>
 
@@ -41,7 +113,7 @@ BioMolE Lab studies how molecular interactions affect biomolecular organization,
 
 <div markdown="0" style="height: 2.2rem;"></div>
 
-## 2. Enzyme Discovery, Engineering & Biocatalysis
+<h2 id="enzyme-engineering" class="research-section-anchor">2. Enzyme Discovery, Engineering &amp; Biocatalysis</h2>
 
 <div markdown="0" style="display: flex; gap: 1.8rem; align-items: flex-start; flex-wrap: wrap; margin: 1.5rem 0;"><div style="flex: 1 1 200px; min-width: 180px; max-width: 300px;"><img src="/assets/img/research_3.jpg" alt="Marine-derived tyrosinase" style="width: 100%; height: auto; border-radius: 6px;"></div><div style="flex: 2.6 1 340px; min-width: 300px; line-height: 1.7;"><p>We discover and characterize enzymes with useful catalytic properties. Marine tyrosinases are major model enzymes in our laboratory.</p><p>Using marine-derived tyrosinases and related enzymes, we study enzyme kinetics, substrate specificity, stability, and structure–function relationships. We also use protein engineering to improve enzyme activity and apply the enzymes to biocatalysis, immobilization, and biosensing.</p></div></div>
 
@@ -66,7 +138,7 @@ BioMolE Lab studies how molecular interactions affect biomolecular organization,
 
 <div markdown="0" style="height: 2.2rem;"></div>
 
-## 3. Interfaces, Mass Transfer & Bioprocess Engineering
+<h2 id="biointerfaces-bioprocesses" class="research-section-anchor">3. Interfaces, Mass Transfer &amp; Bioprocess Engineering</h2>
 
 <div markdown="0" style="display: flex; gap: 1.8rem; align-items: flex-start; flex-wrap: wrap; margin: 1.5rem 0;"><div style="flex: 1 1 200px; min-width: 180px; max-width: 300px;"><img src="/assets/img/research_4.jpg" alt="Organic bionanofluids" style="width: 100%; height: auto; border-radius: 6px;"></div><div style="flex: 2.6 1 340px; min-width: 300px; line-height: 1.7;"><p>We study how interfaces and mass-transfer processes affect the supply of gases and dissolved substrates in biological systems. We measure transport behavior and relate it to cellular responses and process performance.</p><p>Bionanofluids and bio-derived dispersed materials have been used as representative systems in our gas–liquid mass-transfer studies. Examples include chitosan/oleamide nanofluids and tannic acid–Fe³⁺-coated cellulose nanocrystals. We apply the same approach to different gas-transfer and cultivation systems to identify transport limitations and improve operating conditions.</p></div></div>
 
