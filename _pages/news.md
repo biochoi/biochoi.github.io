@@ -2,7 +2,6 @@
 layout: page
 title: News & Awards
 permalink: /news/
-description: Latest research news, publications, awards, and announcements from the BioMolE Lab.
 nav: true
 nav_order: 4
 ---
@@ -23,23 +22,20 @@ nav_order: 4
    * Featured notice
    */
   .featured-notice {
-    display: grid;
-    grid-template-columns: minmax(190px, 230px) minmax(0, 1fr);
-    align-items: center;
-    gap: clamp(1.5rem, 3vw, 2.4rem);
-    max-width: 860px;
-    box-sizing: border-box;
-    margin: 0 auto 3.8rem;
-    padding: clamp(1.3rem, 2.8vw, 2rem);
-    border: 1px solid var(--global-divider-color, #dfe3e8);
-    border-radius: 14px;
-    background: var(
-      --global-card-bg-color,
-      var(--global-bg-color, #ffffff)
-    );
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-  }
-
+  display: grid;
+  grid-template-columns: minmax(280px, 330px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.4rem, 2.5vw, 2rem);
+  max-width: 920px;
+  box-sizing: border-box;
+  margin: 0 auto 3.8rem;
+  padding: clamp(1.3rem, 2.8vw, 2rem);
+  border: 1px solid var(--global-divider-color, #dfe3e8);
+  border-radius: 14px;
+  background: var(--global-card-bg-color, var(--global-bg-color, #ffffff));
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+  
   .notice-poster {
     display: block;
     width: 100%;
@@ -89,15 +85,15 @@ nav_order: 4
   }
 
   .notice-organization {
-    margin: 0 0 0.45rem;
+    margin: 0 0 0.55rem;
     color: var(--global-text-color-light);
-    font-size: 0.9rem;
-    font-weight: 500;
-    line-height: 1.55;
+    font-size: 1.08rem;
+    font-weight: 600;
+    line-height: 1.6;
   }
 
   .notice-title {
-    margin: 0;
+    margin: 0 0 0.2rem;
     color: var(--joinus-accent, #1a3a6b);
     font-size: clamp(1.25rem, 2.2vw, 1.6rem);
     font-weight: 700;
@@ -373,17 +369,6 @@ nav_order: 4
     미래 바이오 산업 혁신의 중심에서 성장할<br>
     열정 있는 대학원생을 모집합니다.
   </h2>
-
-  <div class="notice-actions">
-    <a
-      class="notice-button"
-      href="{{ '/assets/img/notice_synbridge.jpg' | relative_url }}"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      사업단 포스터 <span aria-hidden="true">&nbsp;↗</span>
-    </a>
-  </div>
 </div>
 </section>
 
