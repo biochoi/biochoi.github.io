@@ -1,0 +1,33 @@
+# BioMolE Lab member data
+# Members are displayed in the order listed below.
+# Upload photographs to: assets/img/members/
+# Recommended photo: 4:5 portrait, at least 800 x 1000 px.
+# photo_position is optional and can be adjusted, e.g. "center 20%".
+
+graduate:
+  # - name_en: "Example Graduate Student"
+  #   name_ko: "예시 대학원생"
+  #   role: "Ph.D. Student"
+  #   joined: 2026
+  #   topic: "Sequence-dependent coacervation of intrinsically disordered proteins"
+  #   image: "example-graduate.jpg"
+  #   photo_position: "center 25%"
+  #   initials: "EG"
+
+undergraduate:
+  # - name_en: "Example Undergraduate Researcher"
+  #   name_ko: "예시 학부연구생"
+  #   role: "Undergraduate Researcher"
+  #   joined: 2026
+  #   topic: "Interfacial characterization of protein condensates"
+  #   image: "example-undergraduate.jpg"
+  #   photo_position: "center 25%"
+  #   initials: "EU"
+
+alumni:
+  # - name_en: "Example Alumnus"
+  #   name_ko: "예시 졸업생"
+  #   degree: "M.S."
+  #   year: 2030
+  #   thesis: "Title of the thesis"
+  #   position: "Current position and affiliation"
