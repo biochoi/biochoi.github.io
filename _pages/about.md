@@ -30,14 +30,13 @@ latest_posts:
 ---
 
 <style>
-/* 프로필 사진·캡션을 아래로 내림 */
-.profile { margin-top: 3rem; }
-
-/* 본문이 사진 아래로 파고들지 않고 왼쪽 단에만 머물게 함 */
-.post article > .clearfix { display: flow-root; }
+@media (min-width: 768px) {
+  .profile { margin-top: 3rem; }
+  .post article > .clearfix { display: flow-root; }
+}
 </style>
 
-<div markdown="0" style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;"><img src="/assets/img/Logo.png" alt="BioMol Lab Logo" style="width: 230px; height: auto; flex-shrink: 0; background:#ffffff; padding:0.6rem; border-radius:6px;"><div style="font-size: 1.05rem; color: var(--global-text-color-light); line-height: 1.5; flex: 1; min-width: 0;">Dept. of Chem. Eng. &amp; Appl. Chem.<br>Chungnam National University</div></div>
+<div markdown="0" style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; margin-bottom: 2rem;"><img src="/assets/img/Logo.png" alt="BioMol Lab Logo" style="width: 100%; max-width: 230px; height: auto; background:#ffffff; padding:0.6rem; border-radius:6px;"><div style="font-size: 1.05rem; color: var(--global-text-color-light); line-height: 1.5; flex: 1; min-width: 12rem;">Dept. of Chem. Eng. &amp; Appl. Chem.<br>Chungnam National University</div></div>
 
 <div style="font-size: 1.55rem; font-weight: 700; line-height: 1.3; color: var(--joinus-accent, #1a3a6b); margin-bottom: 0.5rem;">
 Designing Biomolecules. Engineering Biosystems.
