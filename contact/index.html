@@ -67,8 +67,8 @@
   }
 
   .contact-actions {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 0.8rem;
     margin: 2.2rem 0 2.6rem;
   }
@@ -78,12 +78,12 @@
     align-items: center;
     justify-content: center;
     min-height: 44px;
-    padding: 0.75rem 1.1rem;
+    padding: 0.75rem 0.7rem;
     border: 2px solid var(--global-theme-color);
     border-radius: 8px;
     color: var(--global-theme-color);
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.35;
     text-align: center;
     text-decoration: none;
     transition:
@@ -129,10 +129,6 @@
   @media (max-width: 700px) {
     .contact-grid {
       grid-template-columns: 1fr;
-    }
-
-    .contact-button {
-      width: 100%;
     }
 
     .contact-directions {
