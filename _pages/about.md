@@ -31,7 +31,7 @@ latest_posts:
 
 <div markdown="0" style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;"><img src="/assets/img/Logo.png" alt="BioMol Lab Logo" style="width: 230px; height: auto; flex-shrink: 0; background:#ffffff; padding:0.6rem; border-radius:6px;"><div style="font-size: 1.05rem; color: var(--global-text-color-light); line-height: 1.5; flex: 1; min-width: 0;">Dept. of Chem. Eng. &amp; Appl. Chem.<br>Chungnam National University</div></div>
 
-<div style="font-size: 1.55rem; font-weight: 700; line-height: 1.3; color: #1a3a6b; margin-bottom: 0.5rem;">
+<div style="font-size: 1.55rem; font-weight: 700; line-height: 1.3; color: var(--joinus-accent, #1a3a6b); margin-bottom: 0.5rem;">
 Designing Biomolecules. Engineering Biosystems.
 </div>
 
