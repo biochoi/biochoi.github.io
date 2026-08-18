@@ -116,6 +116,7 @@ nav_order: 4
     flex-wrap: wrap;
     align-items: center;
     gap: 0.75rem 1.1rem;
+    margin-top: 1.5rem;
   }
 
   .notice-button,
@@ -364,36 +365,26 @@ nav_order: 4
   </a>
 
   <div class="notice-content">
-    <div class="notice-label">
-      GRADUATE RECRUITMENT
-    </div>
+  <p class="notice-organization" lang="ko">
+    충남대학교 공과대학 응용화학공학과 합성생물공학전공
+  </p>
 
-    <p class="notice-organization" lang="ko">
-      충남대학교 공과대학 응용화학공학과 합성생물공학전공
-    </p>
+  <h2 class="notice-title" id="featured-notice-title" lang="ko">
+    미래 바이오 산업 혁신의 중심에서 성장할<br>
+    열정 있는 대학원생을 모집합니다.
+  </h2>
 
-    <h2 class="notice-title" id="featured-notice-title" lang="ko">
-      미래 바이오 산업 혁신의 중심에서 성장할 열정있는 대학원생을 모집합니다.
-    </h2>
-
-    <div class="notice-actions">
-      <a
-        class="notice-button"
-        href="{{ '/assets/img/notice_synbridge.jpg' | relative_url }}"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        View Poster <span aria-hidden="true">&nbsp;↗</span>
-      </a>
-
-      <a
-        class="notice-secondary-link"
-        href="{{ '/joinus/' | relative_url }}"
-      >
-        BioMolE Lab Join Us <span aria-hidden="true">→</span>
-      </a>
-    </div>
+  <div class="notice-actions">
+    <a
+      class="notice-button"
+      href="{{ '/assets/img/notice_synbridge.jpg' | relative_url }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      사업단 포스터 <span aria-hidden="true">&nbsp;↗</span>
+    </a>
   </div>
+</div>
 </section>
 
 <section aria-labelledby="latest-news-title">
