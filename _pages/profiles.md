@@ -39,21 +39,21 @@ nav_order: 4
   /* Principal Investigator */
   .ppl-pi {
     display: grid;
-    grid-template-columns: 220px minmax(0, 1fr);
-    gap: 2.1rem;
+    grid-template-columns: 165px minmax(0, 1fr);
+    gap: 1.8rem;
     align-items: start;
     margin: 2rem 0 1rem;
   }
 
   .ppl-pi-photo {
     display: block;
-    width: 100%;
-    aspect-ratio: 4 / 5;
+    width: 165px;
+    height: 205px;
     border-radius: 8px;
     object-fit: cover;
-    object-position: center 25%;
+    object-position: center 20%;
   }
-
+  
   .ppl-pi-name {
     margin: 0 0 0.25rem;
     color: var(--joinus-accent, #1a3a6b);
@@ -118,7 +118,7 @@ nav_order: 4
   .ppl-photo-blank {
     display: block;
     width: 100%;
-    aspect-ratio: 4 / 5;
+    height: 215px;
     border-radius: 8px;
     object-fit: cover;
     background: var(--global-divider-color, #e8e8e8);
@@ -243,7 +243,8 @@ nav_order: 4
     }
 
     .ppl-pi-photo {
-      max-width: 220px;
+      width: 150px;
+      height: 185px;
     }
 
     .ppl-head {
