@@ -198,7 +198,7 @@ latest_posts:
     gap: 1.2rem 2.5rem;
     width: 100%;
     box-sizing: border-box;
-    margin: 3.5rem 0 3rem;
+    margin: 3.5rem 0 0rem;
     padding: 1.7rem 0;
     border-top: 1px solid var(--global-divider-color, #e0e0e0);
     border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
@@ -376,7 +376,7 @@ By combining protein engineering, quantitative biophysics, synthetic biology, an
     </h2>
 
     <p class="home-joinus-text">
-      Research topics, training, and application procedures are described on the Join&nbsp;Us page.
+      Research topics, training, and application procedures are described on the Join&nbsp;Us page.<br>
       <span lang="ko">대학원생 및 학부연구생을 모집합니다.</span>
     </p>
   </div>
