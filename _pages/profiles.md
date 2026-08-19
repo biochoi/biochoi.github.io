@@ -8,6 +8,48 @@ nav_order: 4
 ---
 
 <style>
+
+  /* People page quick navigation */
+  .ppl-jump-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.55rem 1.15rem;
+    margin: 0.25rem 0 2.35rem;
+    padding: 0.9rem 0;
+    border-top: 1px solid var(--global-divider-color, #e0e0e0);
+    border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
+  }
+
+  .ppl-jump-label {
+    color: var(--global-text-color-light);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.075em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .ppl-jump-nav a,
+  .ppl-jump-nav a:visited {
+    color: var(--global-theme-color, #1a4d3e);
+    font-size: 0.87rem;
+    font-weight: 600;
+    line-height: 1.45;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .ppl-jump-nav a:hover,
+  .ppl-jump-nav a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .ppl-anchor {
+    scroll-margin-top: 6.5rem;
+  }
+
   /* Top-level section headings */
   .ppl-head {
     display: flex;
@@ -108,11 +150,39 @@ nav_order: 4
     text-underline-offset: 4px;
   }
 
-  /* PI profile details: nested below the PI rather than a peer section */
+  /* PI profile details: collapsed by default so the team appears earlier */
   .ppl-profile-block {
-    margin: 2.35rem 0 1rem;
-    padding-top: 1.45rem;
+    margin: 2.15rem 0 0.75rem;
     border-top: 1px solid var(--global-divider-color, #e0e0e0);
+    border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
+  }
+
+  .ppl-profile-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1rem 0;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .ppl-profile-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .ppl-profile-summary::after {
+    flex: 0 0 auto;
+    color: var(--global-theme-color, #1a4d3e);
+    content: "View details  +";
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.015em;
+    white-space: nowrap;
+  }
+
+  .ppl-profile-block[open] .ppl-profile-summary::after {
+    content: "Hide details  −";
   }
 
   .ppl-profile-label {
@@ -120,7 +190,7 @@ nav_order: 4
     flex-wrap: wrap;
     align-items: baseline;
     gap: 0.35rem 0.55rem;
-    margin: 0 0 1.45rem;
+    margin: 0;
     color: var(--global-theme-color, #1a4d3e);
     font-size: 0.76rem;
     font-weight: 800;
@@ -142,6 +212,7 @@ nav_order: 4
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0 3rem;
     align-items: start;
+    padding: 0.75rem 0 1.65rem;
   }
 
   .ppl-cv-column {
@@ -423,6 +494,23 @@ nav_order: 4
   }
 
   @media (max-width: 720px) {
+    .ppl-jump-nav {
+      gap: 0.55rem 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .ppl-jump-label {
+      width: 100%;
+    }
+
+    .ppl-profile-summary {
+      align-items: flex-start;
+    }
+
+    .ppl-profile-summary::after {
+      padding-top: 0.08rem;
+    }
+
     .ppl-pi {
       grid-template-columns: 1fr;
       gap: 1.35rem;
@@ -485,8 +573,27 @@ nav_order: 4
   }
 </style>
 
+{% assign grads = site.data.members.graduate %}
+{% assign undergrads = site.data.members.undergraduate %}
+{% assign alumni = site.data.members.alumni %}
+{% assign shared_contact = site.data.members.shared_contact %}
+
+<nav class="ppl-jump-nav" aria-label="People page navigation">
+  <span class="ppl-jump-label">Jump to</span>
+
+  <a href="#ppl-pi-heading">Principal Investigator</a>
+
+  {% if grads and grads != empty %}
+    <a href="#ppl-graduate-heading">Graduate Students</a>
+  {% endif %}
+
+  {% if undergrads and undergrads != empty %}
+    <a href="#ppl-undergraduate-heading">Undergraduate Researchers</a>
+  {% endif %}
+</nav>
+
 <section aria-labelledby="ppl-pi-heading">
-  <h2 class="ppl-head ppl-head-first" id="ppl-pi-heading">
+  <h2 class="ppl-head ppl-head-first ppl-anchor" id="ppl-pi-heading">
     Principal Investigator
     <span class="ppl-head-ko" lang="ko">연구책임자</span>
   </h2>
@@ -531,11 +638,13 @@ nav_order: 4
 
   {% assign cv_columns = site.data.pi_cv.columns %}
   {% if cv_columns and cv_columns != empty %}
-    <div class="ppl-profile-block" aria-label="Selected profile">
-      <div class="ppl-profile-label">
-        Selected Profile
-        <span class="ppl-profile-label-ko" lang="ko">주요 이력</span>
-      </div>
+    <details class="ppl-profile-block" id="ppl-selected-profile">
+      <summary class="ppl-profile-summary">
+        <span class="ppl-profile-label">
+          Selected Profile
+          <span class="ppl-profile-label-ko" lang="ko">주요 이력</span>
+        </span>
+      </summary>
 
       <div class="ppl-cv">
         {% for column in cv_columns %}
@@ -560,14 +669,13 @@ nav_order: 4
           </div>
         {% endfor %}
       </div>
-    </div>
+    </details>
   {% endif %}
 </section>
 
-{% assign grads = site.data.members.graduate %}
 {% if grads and grads != empty %}
   <section aria-labelledby="ppl-graduate-heading">
-    <h2 class="ppl-head" id="ppl-graduate-heading">
+    <h2 class="ppl-head ppl-anchor" id="ppl-graduate-heading">
       Graduate Students
       <span class="ppl-head-ko" lang="ko">대학원생</span>
     </h2>
@@ -614,10 +722,9 @@ nav_order: 4
   </section>
 {% endif %}
 
-{% assign undergrads = site.data.members.undergraduate %}
 {% if undergrads and undergrads != empty %}
   <section aria-labelledby="ppl-undergraduate-heading">
-    <h2 class="ppl-head" id="ppl-undergraduate-heading">
+    <h2 class="ppl-head ppl-anchor" id="ppl-undergraduate-heading">
       Undergraduate Researchers
       <span class="ppl-head-ko" lang="ko">학부연구생</span>
     </h2>
@@ -664,9 +771,8 @@ nav_order: 4
   </section>
 {% endif %}
 
-{% assign shared_contact = site.data.members.shared_contact %}
 {% if shared_contact %}
-  <aside class="ppl-shared-contact" aria-label="Student workspace and shared telephone">
+  <aside class="ppl-shared-contact ppl-anchor" id="ppl-workspace" aria-label="Student workspace and shared telephone">
     <div class="ppl-shared-contact-item">
       <span class="ppl-shared-contact-label">
         Student Workspace
@@ -690,10 +796,9 @@ nav_order: 4
   </aside>
 {% endif %}
 
-{% assign alumni = site.data.members.alumni %}
 {% if alumni and alumni != empty %}
   <section aria-labelledby="ppl-alumni-heading">
-    <h2 class="ppl-head" id="ppl-alumni-heading">
+    <h2 class="ppl-head ppl-anchor" id="ppl-alumni-heading">
       Alumni
       <span class="ppl-head-ko" lang="ko">졸업생</span>
     </h2>
@@ -742,4 +847,3 @@ nav_order: 4
     Join Us <span aria-hidden="true">→</span>
   </a>
 </section>
-
