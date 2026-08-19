@@ -138,7 +138,7 @@ BioMolE Lab studies how molecular interactions affect biomolecular organization,
 
 <div markdown="0" style="height: 2.2rem;"></div>
 
-<h2 id="biointerfaces-bioprocesses" class="research-section-anchor">3. Interfaces, Mass Transfer &amp; Bioprocess Engineering</h2>
+<h2 id="biointerfaces-bioprocesses" class="research-section-anchor">3. Biointerfaces, Mass Transfer &amp; Bioprocess Engineering</h2>
 
 <div markdown="0" style="display: flex; gap: 1.8rem; align-items: flex-start; flex-wrap: wrap; margin: 1.5rem 0;"><div style="flex: 1 1 200px; min-width: 180px; max-width: 300px;"><img src="/assets/img/research_4.jpg" alt="Organic bionanofluids" style="width: 100%; height: auto; border-radius: 6px;"></div><div style="flex: 2.6 1 340px; min-width: 300px; line-height: 1.7;"><p>We study how interfaces and mass-transfer processes affect the supply of gases and dissolved substrates in biological systems. We measure transport behavior and relate it to cellular responses and process performance.</p><p>Bionanofluids and bio-derived dispersed materials have been used as representative systems in our gas–liquid mass-transfer studies. Examples include chitosan/oleamide nanofluids and tannic acid–Fe³⁺-coated cellulose nanocrystals. We apply the same approach to different gas-transfer and cultivation systems to identify transport limitations and improve operating conditions.</p></div></div>
 
