@@ -45,7 +45,7 @@ latest_posts:
 
   @media (min-width: 768px) {
     .profile {
-      margin-top: 1.6rem;
+      margin-top: 3rem;
     }
 
     .profile .more-info {
@@ -345,9 +345,7 @@ Based on this understanding, we develop functional biomaterials and engineer enz
 <p
   lang="ko"
   style="
-    margin: 1.25rem 0 0;
-    padding-left: 1rem;
-    border-left: 3px solid var(--global-theme-color, #1a4d3e);
+    margin: 1.35rem 0 0;
     color: var(--global-text-color);
     font-size: 0.96rem;
     line-height: 1.8;
