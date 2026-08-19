@@ -651,7 +651,7 @@ nav_order: 4
             {% for sec in column.sections %}
               <section class="ppl-cv-section">
                 <h3>
-                  {{ sec.title }}{% if sec.title_ko %}<span class="ppl-cv-ko" lang="ko">{{ sec.title_ko }}</span>{% endif %}
+                  {{ sec.title }}{% if sec.title_ko %}&nbsp;<span class="ppl-cv-ko" lang="ko">{{ sec.title_ko }}</span>{% endif %}
                 </h3>
 
                 <ul>
@@ -701,7 +701,7 @@ nav_order: 4
 
           <div class="ppl-member-copy">
             <h3 class="ppl-name">
-              {{ m.name_en }}{% if m.name_ko %}<span class="ppl-name-ko" lang="ko">{{ m.name_ko }}</span>{% endif %}
+              {{ m.name_en }}{% if m.name_ko %}&nbsp;<span class="ppl-name-ko" lang="ko">{{ m.name_ko }}</span>{% endif %}
             </h3>
 
             <p class="ppl-role">
