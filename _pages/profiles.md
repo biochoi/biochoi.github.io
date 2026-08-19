@@ -8,7 +8,7 @@ nav_order: 4
 ---
 
 <style>
-  /* Section headings */
+  /* Top-level section headings: consistent with the rest of the website */
   .ppl-head {
     display: flex;
     flex-wrap: wrap;
@@ -25,7 +25,7 @@ nav_order: 4
     line-height: 1.25;
   }
 
-  .ppl-head:first-of-type {
+  .ppl-head-first {
     margin-top: 0.5rem;
   }
 
@@ -92,7 +92,7 @@ nav_order: 4
   .ppl-pi-links a,
   .ppl-pi-links a:visited {
     color: var(--global-theme-color, #1a4d3e);
-    font-weight: 650;
+    font-weight: 600;
     text-decoration: none;
   }
 
@@ -102,13 +102,19 @@ nav_order: 4
     text-underline-offset: 4px;
   }
 
-  /* Curriculum vitae */
+  /* Education and appointments: visually nested under the PI section */
+  .ppl-cv-under-pi {
+    margin: 2.2rem 0 1rem;
+    padding-top: 1.45rem;
+    border-top: 1px solid var(--global-divider-color, #e0e0e0);
+  }
+
   .ppl-cv {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2.4rem 2.8rem;
     align-items: start;
-    margin: 2.1rem 0 1rem;
+    margin: 0;
   }
 
   .ppl-cv h3 {
@@ -154,7 +160,7 @@ nav_order: 4
   .ppl-cv-what {
     display: block;
     font-size: 0.9rem;
-    font-weight: 650;
+    font-weight: 600;
     line-height: 1.45;
   }
 
@@ -166,7 +172,7 @@ nav_order: 4
     line-height: 1.5;
   }
 
-  /* Member grid: exactly four columns on desktop */
+  /* Member grid: four columns on desktop */
   .ppl-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -251,7 +257,7 @@ nav_order: 4
     white-space: nowrap;
   }
 
-  /* Join Us: no card or boxed button */
+  /* Join Us: simple ruled layout, without a card or boxed button */
   .ppl-joinus {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
@@ -340,191 +346,196 @@ nav_order: 4
   }
 </style>
 
-<h2 class="ppl-head">
-  Principal Investigator
-  <span class="ppl-head-ko" lang="ko">연구책임자</span>
-</h2>
-
-<section class="ppl-pi" aria-label="Principal Investigator">
-  <img
-    class="ppl-pi-photo"
-    src="{{ '/assets/img/prof_pic.jpg' | relative_url }}"
-    alt="Portrait of Prof. Yoo Seong Choi"
-    width="800"
-    height="1000"
-  >
-
-  <div>
-    <p class="ppl-pi-name">
-      Yoo Seong Choi
-      <span class="ppl-name-ko" lang="ko">최유성</span>
-    </p>
-
-    <p class="ppl-pi-role">
-      Professor, Department of Chemical Engineering and Applied Chemistry<br>
-      Chungnam National University<br>
-      <a href="mailto:biochoi@cnu.ac.kr">biochoi@cnu.ac.kr</a>
-    </p>
-
-    <p class="ppl-pi-bio">
-      Prof. Choi's research examines how molecular interactions organize
-      biomolecules and how these principles can be translated into functional
-      biomaterials, biocatalysis, and bioprocesses. The laboratory integrates
-      protein engineering, quantitative biophysics, synthetic biology, and
-      bioprocess engineering.
-    </p>
-
-    <nav class="ppl-pi-links" aria-label="Principal investigator links">
-      <a href="{{ '/research/' | relative_url }}">Research</a>
-      <a href="{{ '/publications/' | relative_url }}">Publications</a>
-      <a href="{{ '/contact/' | relative_url }}">Contact</a>
-    </nav>
-  </div>
-</section>
-
-{% assign cv_sections = site.data.pi_cv.sections %}
-{% if cv_sections and cv_sections != empty %}
-  <h2 class="ppl-head">
-    Curriculum Vitae
-    <span class="ppl-head-ko" lang="ko">주요 이력</span>
+<section aria-labelledby="ppl-pi-heading">
+  <h2 class="ppl-head ppl-head-first" id="ppl-pi-heading">
+    Principal Investigator
+    <span class="ppl-head-ko" lang="ko">연구책임자</span>
   </h2>
 
-  <div class="ppl-cv">
-    {% for sec in cv_sections %}
-      <section>
-        <h3>
-          {{ sec.title }}{% if sec.title_ko %}<span class="ppl-cv-ko" lang="ko">{{ sec.title_ko }}</span>{% endif %}
-        </h3>
+  <div class="ppl-pi">
+    <img
+      class="ppl-pi-photo"
+      src="{{ '/assets/img/prof_pic.jpg' | relative_url }}"
+      alt="Portrait of Prof. Yoo Seong Choi"
+      width="800"
+      height="1000"
+    >
 
-        <ul>
-          {% for item in sec.items %}
-            <li>
-              {% if item.when %}<span class="ppl-cv-when">{{ item.when }}</span>{% endif %}
-              <span class="ppl-cv-what">{{ item.what }}</span>
-              {% if item.where %}<span class="ppl-cv-where">{{ item.where }}</span>{% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      </section>
-    {% endfor %}
+    <div>
+      <p class="ppl-pi-name">
+        Yoo Seong Choi
+        <span class="ppl-name-ko" lang="ko">최유성</span>
+      </p>
+
+      <p class="ppl-pi-role">
+        Professor, Department of Chemical Engineering and Applied Chemistry<br>
+        Chungnam National University<br>
+        <a href="mailto:biochoi@cnu.ac.kr">biochoi@cnu.ac.kr</a>
+      </p>
+
+      <p class="ppl-pi-bio">
+        Prof. Choi investigates how molecular interactions govern biomolecular
+        organization and how these principles can be translated into functional
+        biomaterials, biocatalysis, and bioprocesses. His research integrates
+        protein engineering, quantitative biophysics, synthetic biology, and
+        bioprocess engineering.
+      </p>
+
+      <nav class="ppl-pi-links" aria-label="Principal investigator links">
+        <a href="{{ '/research/' | relative_url }}">Research</a>
+        <a href="{{ '/publications/' | relative_url }}">Publications</a>
+        <a href="{{ '/contact/' | relative_url }}">Contact</a>
+      </nav>
+    </div>
   </div>
-{% endif %}
+
+  {% assign cv_sections = site.data.pi_cv.sections %}
+  {% if cv_sections and cv_sections != empty %}
+    <div class="ppl-cv-under-pi" aria-label="Education and academic appointments">
+      <div class="ppl-cv">
+        {% for sec in cv_sections %}
+          <section>
+            <h3>
+              {{ sec.title }}{% if sec.title_ko %}<span class="ppl-cv-ko" lang="ko">{{ sec.title_ko }}</span>{% endif %}
+            </h3>
+
+            <ul>
+              {% for item in sec.items %}
+                <li>
+                  {% if item.when %}<span class="ppl-cv-when">{{ item.when }}</span>{% endif %}
+                  <span class="ppl-cv-what">{{ item.what }}</span>
+                  {% if item.where %}<span class="ppl-cv-where">{{ item.where }}</span>{% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </section>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</section>
 
 {% assign grads = site.data.members.graduate %}
 {% if grads and grads != empty %}
-  <h2 class="ppl-head">
-    Graduate Students
-    <span class="ppl-head-ko" lang="ko">대학원생</span>
-  </h2>
+  <section aria-labelledby="ppl-graduate-heading">
+    <h2 class="ppl-head" id="ppl-graduate-heading">
+      Graduate Students
+      <span class="ppl-head-ko" lang="ko">대학원생</span>
+    </h2>
 
-  <div class="ppl-grid">
-    {% for m in grads %}
-      <article class="ppl-member">
-        {% if m.image %}
-          <img
-            class="ppl-photo"
-            src="{{ '/assets/img/members/' | append: m.image | relative_url }}"
-            alt="Portrait of {{ m.name_en }}"
-            loading="lazy"
-            decoding="async"
-            width="800"
-            height="1000"
-            style="object-position: {{ m.photo_position | default: 'center 25%' }};"
-          >
-        {% else %}
-          <div class="ppl-photo-blank" aria-hidden="true">
-            {% if m.initials %}{{ m.initials }}{% else %}{{ m.name_en | slice: 0, 1 }}{% endif %}
-          </div>
-        {% endif %}
+    <div class="ppl-grid">
+      {% for m in grads %}
+        <article class="ppl-member">
+          {% if m.image %}
+            <img
+              class="ppl-photo"
+              src="{{ '/assets/img/members/' | append: m.image | relative_url }}"
+              alt="Portrait of {{ m.name_en }}"
+              loading="lazy"
+              decoding="async"
+              width="800"
+              height="1000"
+              style="object-position: {{ m.photo_position | default: 'center 25%' }};"
+            >
+          {% else %}
+            <div class="ppl-photo-blank" aria-hidden="true">
+              {% if m.initials %}{{ m.initials }}{% else %}{{ m.name_en | slice: 0, 1 }}{% endif %}
+            </div>
+          {% endif %}
 
-        <p class="ppl-name">
-          {{ m.name_en }}{% if m.name_ko %}<span class="ppl-name-ko" lang="ko">{{ m.name_ko }}</span>{% endif %}
-        </p>
+          <p class="ppl-name">
+            {{ m.name_en }}{% if m.name_ko %}<span class="ppl-name-ko" lang="ko">{{ m.name_ko }}</span>{% endif %}
+          </p>
 
-        <p class="ppl-role">
-          {{ m.role }}{% if m.joined %}<span class="ppl-joined"> · Joined {{ m.joined }}</span>{% endif %}
-        </p>
+          <p class="ppl-role">
+            {{ m.role }}{% if m.joined %}<span class="ppl-joined"> · Joined {{ m.joined }}</span>{% endif %}
+          </p>
 
-        {% if m.topic %}<p class="ppl-topic">{{ m.topic }}</p>{% endif %}
-      </article>
-    {% endfor %}
-  </div>
+          {% if m.topic %}<p class="ppl-topic">{{ m.topic }}</p>{% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </section>
 {% endif %}
 
 {% assign undergrads = site.data.members.undergraduate %}
 {% if undergrads and undergrads != empty %}
-  <h2 class="ppl-head">
-    Undergraduate Researchers
-    <span class="ppl-head-ko" lang="ko">학부연구생</span>
-  </h2>
+  <section aria-labelledby="ppl-undergraduate-heading">
+    <h2 class="ppl-head" id="ppl-undergraduate-heading">
+      Undergraduate Researchers
+      <span class="ppl-head-ko" lang="ko">학부연구생</span>
+    </h2>
 
-  <div class="ppl-grid">
-    {% for m in undergrads %}
-      <article class="ppl-member">
-        {% if m.image %}
-          <img
-            class="ppl-photo"
-            src="{{ '/assets/img/members/' | append: m.image | relative_url }}"
-            alt="Portrait of {{ m.name_en }}"
-            loading="lazy"
-            decoding="async"
-            width="800"
-            height="1000"
-            style="object-position: {{ m.photo_position | default: 'center 25%' }};"
-          >
-        {% else %}
-          <div class="ppl-photo-blank" aria-hidden="true">
-            {% if m.initials %}{{ m.initials }}{% else %}{{ m.name_en | slice: 0, 1 }}{% endif %}
-          </div>
-        {% endif %}
+    <div class="ppl-grid">
+      {% for m in undergrads %}
+        <article class="ppl-member">
+          {% if m.image %}
+            <img
+              class="ppl-photo"
+              src="{{ '/assets/img/members/' | append: m.image | relative_url }}"
+              alt="Portrait of {{ m.name_en }}"
+              loading="lazy"
+              decoding="async"
+              width="800"
+              height="1000"
+              style="object-position: {{ m.photo_position | default: 'center 25%' }};"
+            >
+          {% else %}
+            <div class="ppl-photo-blank" aria-hidden="true">
+              {% if m.initials %}{{ m.initials }}{% else %}{{ m.name_en | slice: 0, 1 }}{% endif %}
+            </div>
+          {% endif %}
 
-        <p class="ppl-name">
-          {{ m.name_en }}{% if m.name_ko %}<span class="ppl-name-ko" lang="ko">{{ m.name_ko }}</span>{% endif %}
-        </p>
+          <p class="ppl-name">
+            {{ m.name_en }}{% if m.name_ko %}<span class="ppl-name-ko" lang="ko">{{ m.name_ko }}</span>{% endif %}
+          </p>
 
-        <p class="ppl-role">
-          {{ m.role }}{% if m.joined %}<span class="ppl-joined"> · Joined {{ m.joined }}</span>{% endif %}
-        </p>
+          <p class="ppl-role">
+            {{ m.role }}{% if m.joined %}<span class="ppl-joined"> · Joined {{ m.joined }}</span>{% endif %}
+          </p>
 
-        {% if m.topic %}<p class="ppl-topic">{{ m.topic }}</p>{% endif %}
-      </article>
-    {% endfor %}
-  </div>
+          {% if m.topic %}<p class="ppl-topic">{{ m.topic }}</p>{% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </section>
 {% endif %}
 
 {% assign alumni = site.data.members.alumni %}
 {% if alumni and alumni != empty %}
-  <h2 class="ppl-head">
-    Alumni
-    <span class="ppl-head-ko" lang="ko">졸업생</span>
-  </h2>
+  <section aria-labelledby="ppl-alumni-heading">
+    <h2 class="ppl-head" id="ppl-alumni-heading">
+      Alumni
+      <span class="ppl-head-ko" lang="ko">졸업생</span>
+    </h2>
 
-  <div class="ppl-alumni-wrap">
-    <table class="ppl-alumni">
-      <thead>
-        <tr>
-          <th scope="col">Year</th>
-          <th scope="col">Name</th>
-          <th scope="col">Degree</th>
-          <th scope="col">Thesis</th>
-          <th scope="col">Current position</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for a in alumni %}
+    <div class="ppl-alumni-wrap">
+      <table class="ppl-alumni">
+        <thead>
           <tr>
-            <td>{{ a.year }}</td>
-            <td>
-              {{ a.name_en }}{% if a.name_ko %} <span lang="ko">{{ a.name_ko }}</span>{% endif %}
-            </td>
-            <td>{{ a.degree | default: '—' }}</td>
-            <td>{{ a.thesis | default: '—' }}</td>
-            <td>{{ a.position | default: '—' }}</td>
+            <th scope="col">Year</th>
+            <th scope="col">Name</th>
+            <th scope="col">Degree</th>
+            <th scope="col">Thesis</th>
+            <th scope="col">Current position</th>
           </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </div>
+        </thead>
+        <tbody>
+          {% for a in alumni %}
+            <tr>
+              <td>{{ a.year }}</td>
+              <td>
+                {{ a.name_en }}{% if a.name_ko %} <span lang="ko">{{ a.name_ko }}</span>{% endif %}
+              </td>
+              <td>{{ a.degree | default: '—' }}</td>
+              <td>{{ a.thesis | default: '—' }}</td>
+              <td>{{ a.position | default: '—' }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
 {% endif %}
 
 <section class="ppl-joinus" aria-label="Join the BioMolE Lab">
