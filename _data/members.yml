@@ -5,11 +5,19 @@
 #
 # Graduate students have a broad research-focus line.
 # Undergraduate researchers intentionally omit the topic field.
+# Student e-mail addresses are displayed as clickable mail links.
+
+shared_contact:
+  room_en: "Engineering Building 1, Room 153-3"
+  room_ko: "충남대학교 공학1호관 153-3호"
+  phone: "042-821-7672"
+  phone_href: "+82428217672"
 
 graduate:
   - name_en: "Hyunsuk Choi"
     name_ko: "최현석"
     role: "Ph.D. Student"
+    email: "chs930227@gmail.com"
     topic: "Biomolecular condensates and functional biomaterials"
     image: "hyunsuk-choi.jpg"
     photo_position: "center center"
@@ -18,6 +26,7 @@ graduate:
   - name_en: "Jaemin Han"
     name_ko: "한재민"
     role: "M.S. Student"
+    email: "woalsdl4605@naver.com"
     topic: "Protein engineering and bioprocess applications"
     image: "jaemin-han.jpg"
     photo_position: "center center"
@@ -26,6 +35,7 @@ graduate:
   - name_en: "Chanmi Oh"
     name_ko: "오찬미"
     role: "M.S. Student"
+    email: "ocm0401@naver.com"
     topic: "Microencapsulation and artificial cell systems"
     image: "chanmi-oh.jpg"
     photo_position: "center center"
@@ -34,6 +44,7 @@ graduate:
   - name_en: "Juhui Jeon"
     name_ko: "전주희"
     role: "M.S. Student"
+    email: "iuye124@naver.com"
     topic: "Enzyme systems and compartmentalized biocatalysis"
     image: "juhui-jeon.jpg"
     photo_position: "center center"
@@ -43,6 +54,7 @@ undergraduate:
   - name_en: "Hyeonsu Park"
     name_ko: "박현수"
     role: "Undergraduate Researcher"
+    email: "67h999@naver.com"
     image: "hyeonsu-park.jpg"
     photo_position: "center center"
     initials: "HP"
@@ -50,16 +62,18 @@ undergraduate:
   - name_en: "Hojoong Kim"
     name_ko: "김호중"
     role: "Undergraduate Researcher"
+    email: "khoj02@naver.com"
     image: "h-kim.jpg"
     photo_position: "center center"
     initials: "HK"
 
   # Add the two students joining in September 2026 after their
-  # English names and photographs are confirmed.
+  # English names, e-mail addresses, and photographs are confirmed.
   #
   # - name_en: "English Name"
   #   name_ko: "한글 이름"
   #   role: "Undergraduate Researcher"
+  #   email: "student@example.com"
   #   image: "english-name.jpg"
   #   photo_position: "center center"
   #   initials: "EN"
@@ -73,3 +87,4 @@ alumni:
   #   year: 2030
   #   thesis: "Thesis title"
   #   position: "Current position"
+
