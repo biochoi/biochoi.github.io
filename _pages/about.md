@@ -33,6 +33,10 @@ latest_posts:
     .profile {
       margin-top: 3rem;
     }
+
+    .profile .more-info {
+      text-align: right;
+    }
   }
 
   /* ══════════════════════════════════════════════════════════
