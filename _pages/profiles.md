@@ -223,20 +223,37 @@ nav_order: 3
   }
 
   .ppl-cv-section h3 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.45rem;
     margin: 0 0 1rem;
-    padding-bottom: 0.52rem;
+    padding-bottom: 0.58rem;
     border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
-    color: var(--global-text-color, #222222);
+    color: var(--global-theme-color, #1a4d3e);
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.45;
   }
 
+  .ppl-cv-section h3::after {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 44px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--global-theme-color, #1a4d3e);
+    content: "";
+  }
+
   .ppl-cv-ko {
-    margin-left: 0.45rem;
-    color: var(--global-text-color-light);
+    margin-left: 0;
+    color: inherit;
     font-size: 0.83rem;
     font-weight: 400;
+    opacity: 0.82;
   }
 
   .ppl-cv-section ul {
@@ -264,7 +281,7 @@ nav_order: 3
 
   .ppl-cv-what {
     display: block;
-    color: var(--global-text-color, #222222);
+    color: var(--global-text-color);
     font-size: 0.89rem;
     font-weight: 600;
     line-height: 1.46;
@@ -622,10 +639,10 @@ nav_order: 3
 
       <p class="ppl-pi-bio">
         Prof. Choi’s research focuses mainly on proteins and how their sequences,
-        structures, and interactions shape assembly and function. His major research
-        area include biomolecular condensates and enzyme engineering, with
-        applications in functional biomaterials and bioprocesses.
-       </p>
+        structures, and interactions shape assembly and function. His work spans
+        biomolecular condensates and enzyme engineering, with applications in
+        functional biomaterials and bioprocesses.
+      </p>
 
       <nav class="ppl-pi-links" aria-label="Principal investigator links">
         <a href="{{ '/research/' | relative_url }}">Research</a>
@@ -651,7 +668,7 @@ nav_order: 3
             {% for sec in column.sections %}
               <section class="ppl-cv-section">
                 <h3>
-                  {{ sec.title }}{% if sec.title_ko %}&nbsp;<span class="ppl-cv-ko" lang="ko">{{ sec.title_ko }}</span>{% endif %}
+                  {{ sec.title }}{% if sec.title_ko %}<span class="ppl-cv-ko" lang="ko">{{ sec.title_ko }}</span>{% endif %}
                 </h3>
 
                 <ul>
@@ -701,7 +718,7 @@ nav_order: 3
 
           <div class="ppl-member-copy">
             <h3 class="ppl-name">
-              {{ m.name_en }}{% if m.name_ko %}&nbsp;<span class="ppl-name-ko" lang="ko">{{ m.name_ko }}</span>{% endif %}
+              {{ m.name_en }}{% if m.name_ko %}<span class="ppl-name-ko" lang="ko">{{ m.name_ko }}</span>{% endif %}
             </h3>
 
             <p class="ppl-role">
