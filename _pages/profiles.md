@@ -45,13 +45,19 @@ nav_order: 4
     margin: 2.1rem 0 1rem;
   }
 
+  .ppl-pi-photo-wrap {
+    width: 175px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
   .ppl-pi-photo {
     display: block;
-    width: 175px;
-    aspect-ratio: 4 / 5;
-    border-radius: 8px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    object-position: center 20%;
+    object-position: center 18%;
   }
 
   .ppl-pi-name {
@@ -149,7 +155,7 @@ nav_order: 4
     margin: 0 0 1rem;
     padding-bottom: 0.52rem;
     border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
-    color: var(--joinus-accent, #1a3a6b);
+    color: var(--global-text-color, #222222);
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.45;
@@ -187,6 +193,7 @@ nav_order: 4
 
   .ppl-cv-what {
     display: block;
+    color: var(--global-text-color, #222222);
     font-size: 0.89rem;
     font-weight: 600;
     line-height: 1.46;
@@ -421,8 +428,9 @@ nav_order: 4
       gap: 1.35rem;
     }
 
-    .ppl-pi-photo {
+    .ppl-pi-photo-wrap {
       width: 160px;
+      height: 200px;
     }
 
     .ppl-head {
@@ -484,13 +492,15 @@ nav_order: 4
   </h2>
 
   <div class="ppl-pi">
-    <img
-      class="ppl-pi-photo"
-      src="{{ '/assets/img/prof_pic.jpg' | relative_url }}"
-      alt="Portrait of Prof. Yoo Seong Choi"
-      width="800"
-      height="1000"
-    >
+    <div class="ppl-pi-photo-wrap">
+      <img
+        class="ppl-pi-photo"
+        src="{{ '/assets/img/prof_pic.jpg' | relative_url }}"
+        alt="Portrait of Prof. Yoo Seong Choi"
+        width="800"
+        height="1000"
+      >
+    </div>
 
     <div>
       <p class="ppl-pi-name">
