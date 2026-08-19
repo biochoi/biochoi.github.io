@@ -4,7 +4,7 @@ title: Join Us
 permalink: /joinus/
 description:
 nav: true
-nav_order: 5
+nav_order: 6
 ---
 
 <div markdown="0" style="text-align:center; margin:-0.5rem 0 2rem;"><div style="font-size:1.5rem; font-weight:600; color:var(--joinus-accent, #1a3a6b); line-height:1.4;">Learn by doing research.</div><div style="font-size:1.05rem; color:var(--global-text-color-light); margin-top:0.4rem;">직접 연구하며 연구하는 방법을 배웁니다.</div></div>
