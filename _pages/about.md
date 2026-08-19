@@ -9,11 +9,10 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-
     <p>Prof. Yoo Seong Choi</p>
     <p>Principal Investigator</p>
-    <p>E-mail: biochoi@cnu.ac.kr</p>
-    
+    <p>E-mail: <a href="mailto:biochoi@cnu.ac.kr">biochoi@cnu.ac.kr</a></p>
+
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 
@@ -29,13 +28,34 @@ latest_posts:
 ---
 
 <style>
+  /* ══════════════════════════════════════════════════════════
+   * 프로필 (사진 + 이름 · 직위 · 이메일)
+   * ══════════════════════════════════════════════════════════ */
+
+  /* 코드 블록 글꼴로 잡히는 것을 방지 */
+  .profile .more-info {
+    font-family: inherit;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .profile .more-info p {
+    margin: 0;
+  }
+
   @media (min-width: 768px) {
     .profile {
       margin-top: 3rem;
     }
 
     .profile .more-info {
+      margin-top: 0.9rem;
       text-align: right;
+    }
+
+    /* 소개글이 사진·연락처 아래로 파고들지 않게 함 */
+    .post article > .clearfix {
+      display: flow-root;
     }
   }
 
@@ -94,7 +114,7 @@ latest_posts:
   }
 
   /* ══════════════════════════════════════════════════════════
-   * Research — 3단 조판
+   * Research — 가로 띠 조판
    * ══════════════════════════════════════════════════════════ */
 
   .home-research {
@@ -252,7 +272,7 @@ latest_posts:
   }
 
   /* ══════════════════════════════════════════════════════════
-   * 반응형 — 세로 실선을 가로 실선으로 전환
+   * 반응형
    * ══════════════════════════════════════════════════════════ */
 
   @media (max-width: 850px) {
@@ -265,7 +285,7 @@ latest_posts:
     .home-area:first-child {
       padding-top: 1.4rem;
     }
-    
+
     .home-joinus {
       grid-template-columns: 1fr;
     }
