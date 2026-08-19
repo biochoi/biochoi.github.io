@@ -8,15 +8,15 @@ nav_order: 4
 ---
 
 <style>
-  /* Top-level section headings: consistent with the rest of the website */
+  /* Top-level section headings */
   .ppl-head {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
     gap: 0.35rem 0.65rem;
     clear: both;
-    margin: 3.7rem 0 0;
-    padding-bottom: 0.7rem;
+    margin: 3.9rem 0 0;
+    padding-bottom: 0.72rem;
     border-bottom: 2px solid var(--joinus-accent, #1a3a6b);
     color: var(--joinus-accent, #1a3a6b);
     font-size: 1.55rem;
@@ -39,31 +39,31 @@ nav_order: 4
   /* Principal Investigator */
   .ppl-pi {
     display: grid;
-    grid-template-columns: 165px minmax(0, 1fr);
-    gap: 1.8rem;
+    grid-template-columns: 175px minmax(0, 1fr);
+    gap: 1.9rem;
     align-items: start;
-    margin: 2rem 0 1rem;
+    margin: 2.1rem 0 1rem;
   }
 
   .ppl-pi-photo {
     display: block;
-    width: 165px;
-    height: 205px;
+    width: 175px;
+    aspect-ratio: 4 / 5;
     border-radius: 8px;
     object-fit: cover;
     object-position: center 20%;
   }
 
   .ppl-pi-name {
-    margin: 0 0 0.25rem;
+    margin: 0 0 0.28rem;
     color: var(--joinus-accent, #1a3a6b);
-    font-size: 1.28rem;
+    font-size: 1.3rem;
     font-weight: 700;
     line-height: 1.35;
   }
 
   .ppl-name-ko {
-    margin-left: 0.4rem;
+    margin-left: 0.42rem;
     color: var(--global-text-color-light);
     font-size: 0.86em;
     font-weight: 400;
@@ -73,19 +73,19 @@ nav_order: 4
     margin: 0 0 1.05rem;
     color: var(--global-text-color-light);
     font-size: 0.94rem;
-    line-height: 1.6;
+    line-height: 1.62;
   }
 
   .ppl-pi-bio {
-    max-width: 680px;
-    margin: 0 0 1.1rem;
+    max-width: 700px;
+    margin: 0 0 1.12rem;
     line-height: 1.75;
   }
 
   .ppl-pi-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.55rem 1.25rem;
+    gap: 0.55rem 1.3rem;
     font-size: 0.9rem;
   }
 
@@ -102,29 +102,57 @@ nav_order: 4
     text-underline-offset: 4px;
   }
 
-  /* Education and appointments: visually nested under the PI section */
-  .ppl-cv-under-pi {
-    margin: 2.2rem 0 1rem;
+  /* PI profile details: nested below the PI rather than a peer section */
+  .ppl-profile-block {
+    margin: 2.35rem 0 1rem;
     padding-top: 1.45rem;
     border-top: 1px solid var(--global-divider-color, #e0e0e0);
+  }
+
+  .ppl-profile-label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.55rem;
+    margin: 0 0 1.45rem;
+    color: var(--global-theme-color, #1a4d3e);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.085em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .ppl-profile-label-ko {
+    color: var(--global-text-color-light);
+    font-size: 0.84rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
   }
 
   .ppl-cv {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2.4rem 2.8rem;
+    gap: 0 3rem;
     align-items: start;
-    margin: 0;
   }
 
-  .ppl-cv h3 {
-    margin: 0 0 1.05rem;
-    padding-bottom: 0.5rem;
+  .ppl-cv-column {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 2.05rem;
+  }
+
+  .ppl-cv-section h3 {
+    margin: 0 0 1rem;
+    padding-bottom: 0.52rem;
     border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
     color: var(--joinus-accent, #1a3a6b);
     font-size: 1rem;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.45;
   }
 
   .ppl-cv-ko {
@@ -134,17 +162,17 @@ nav_order: 4
     font-weight: 400;
   }
 
-  .ppl-cv ul {
+  .ppl-cv-section ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  .ppl-cv li {
-    margin-bottom: 1.1rem;
+  .ppl-cv-section li {
+    margin-bottom: 0.92rem;
   }
 
-  .ppl-cv li:last-child {
+  .ppl-cv-section li:last-child {
     margin-bottom: 0;
   }
 
@@ -152,41 +180,41 @@ nav_order: 4
     display: block;
     margin-bottom: 0.1rem;
     color: var(--global-text-color-light);
-    font-size: 0.79rem;
+    font-size: 0.77rem;
     font-variant-numeric: tabular-nums;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.015em;
   }
 
   .ppl-cv-what {
     display: block;
-    font-size: 0.9rem;
+    font-size: 0.89rem;
     font-weight: 600;
-    line-height: 1.45;
+    line-height: 1.46;
   }
 
   .ppl-cv-where {
     display: block;
     margin-top: 0.08rem;
     color: var(--global-text-color-light);
-    font-size: 0.84rem;
-    line-height: 1.5;
+    font-size: 0.83rem;
+    line-height: 1.52;
   }
 
-  /* Student profiles: generous two-column layout on desktop */
+  /* Students: spacious two-column profiles */
   .ppl-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2.9rem 2.4rem;
-    margin: 2.25rem 0 1.2rem;
+    gap: 3rem 2.5rem;
+    margin: 2.35rem 0 1.15rem;
   }
 
   .ppl-member {
     display: grid;
-    grid-template-columns: 165px minmax(0, 1fr);
+    grid-template-columns: 155px minmax(0, 1fr);
     gap: 1.25rem;
     align-items: start;
     min-width: 0;
-    padding-bottom: 1.7rem;
+    padding-bottom: 1.8rem;
     border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
   }
 
@@ -215,19 +243,15 @@ nav_order: 4
 
   .ppl-member-copy {
     min-width: 0;
-    padding-top: 0.05rem;
-  }
-
-  .ppl-member-no-topic .ppl-member-copy {
-    align-self: center;
+    padding-top: 0.03rem;
   }
 
   .ppl-name {
-    margin: 0 0 0.28rem;
+    margin: 0 0 0.3rem;
     color: var(--joinus-accent, #1a3a6b);
     font-size: 1.08rem;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.42;
   }
 
   .ppl-role {
@@ -237,39 +261,19 @@ nav_order: 4
     line-height: 1.55;
   }
 
-  .ppl-email {
-    margin: 0.38rem 0 0;
-    font-size: 0.82rem;
-    line-height: 1.5;
-    overflow-wrap: anywhere;
-  }
-
-  .ppl-email a,
-  .ppl-email a:visited {
-    color: var(--global-theme-color, #1a4d3e);
-    font-weight: 500;
-    text-decoration: none;
-  }
-
-  .ppl-email a:hover,
-  .ppl-email a:focus-visible {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
-
   .ppl-joined {
     white-space: nowrap;
   }
 
   .ppl-topic {
-    margin: 0.95rem 0 0;
+    margin: 1rem 0 0;
     font-size: 0.9rem;
-    line-height: 1.65;
+    line-height: 1.66;
   }
 
   .ppl-topic-label {
     display: block;
-    margin-bottom: 0.24rem;
+    margin-bottom: 0.25rem;
     color: var(--global-theme-color, #1a4d3e);
     font-size: 0.7rem;
     font-weight: 700;
@@ -278,12 +282,12 @@ nav_order: 4
     text-transform: uppercase;
   }
 
-  /* Shared student office and lab contact: simple ruled layout */
+  /* Shared student workspace and telephone */
   .ppl-shared-contact {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.2rem 2.8rem;
-    margin: 3.1rem 0 0.8rem;
+    gap: 1.2rem 3rem;
+    margin: 3rem 0 0.8rem;
     padding: 1.35rem 0;
     border-top: 1px solid var(--global-divider-color, #e0e0e0);
     border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
@@ -299,7 +303,7 @@ nav_order: 4
     color: var(--joinus-accent, #1a3a6b);
     font-size: 0.9rem;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.42;
   }
 
   .ppl-shared-contact-ko {
@@ -313,7 +317,7 @@ nav_order: 4
     margin: 0;
     color: var(--global-text-color-light);
     font-size: 0.9rem;
-    line-height: 1.6;
+    line-height: 1.62;
   }
 
   .ppl-shared-contact-value a,
@@ -358,13 +362,13 @@ nav_order: 4
     white-space: nowrap;
   }
 
-  /* Join Us: simple ruled layout, without a card or boxed button */
+  /* Join Us */
   .ppl-joinus {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 1.2rem 2.5rem;
-    margin: 3.7rem 0 2rem;
+    margin: 3.8rem 0 2rem;
     padding: 1.6rem 0;
     border-top: 1px solid var(--global-divider-color, #e0e0e0);
     border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
@@ -382,7 +386,7 @@ nav_order: 4
     margin: 0;
     color: var(--global-text-color-light);
     font-size: 0.92rem;
-    line-height: 1.6;
+    line-height: 1.62;
   }
 
   .ppl-joinus-link,
@@ -400,10 +404,10 @@ nav_order: 4
     text-underline-offset: 4px;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 980px) {
     .ppl-grid {
       grid-template-columns: 1fr;
-      gap: 2.25rem;
+      gap: 2.35rem;
     }
 
     .ppl-member {
@@ -411,15 +415,14 @@ nav_order: 4
     }
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 720px) {
     .ppl-pi {
       grid-template-columns: 1fr;
       gap: 1.35rem;
     }
 
     .ppl-pi-photo {
-      width: 150px;
-      height: 185px;
+      width: 160px;
     }
 
     .ppl-head {
@@ -428,7 +431,7 @@ nav_order: 4
 
     .ppl-cv {
       grid-template-columns: 1fr;
-      gap: 2.1rem;
+      gap: 2rem;
     }
 
     .ppl-shared-contact {
@@ -452,29 +455,24 @@ nav_order: 4
     }
 
     .ppl-topic {
-      margin-top: 0.75rem;
+      margin-top: 0.78rem;
       font-size: 0.86rem;
     }
   }
 
   @media (max-width: 420px) {
     .ppl-grid {
-      gap: 2.1rem;
+      gap: 2.15rem;
     }
 
     .ppl-member {
       grid-template-columns: 1fr;
       gap: 0.95rem;
-      padding-bottom: 1.8rem;
     }
 
     .ppl-photo,
     .ppl-photo-blank {
       width: min(220px, 72vw);
-    }
-
-    .ppl-member-no-topic .ppl-member-copy {
-      align-self: start;
     }
   }
 </style>
@@ -502,8 +500,7 @@ nav_order: 4
 
       <p class="ppl-pi-role">
         Professor, Department of Chemical Engineering and Applied Chemistry<br>
-        Chungnam National University<br>
-        <a href="mailto:biochoi@cnu.ac.kr">biochoi@cnu.ac.kr</a>
+        Chungnam National University
       </p>
 
       <p class="ppl-pi-bio">
@@ -522,26 +519,35 @@ nav_order: 4
     </div>
   </div>
 
-  {% assign cv_sections = site.data.pi_cv.sections %}
-  {% if cv_sections and cv_sections != empty %}
-    <div class="ppl-cv-under-pi" aria-label="Education and academic appointments">
-      <div class="ppl-cv">
-        {% for sec in cv_sections %}
-          <section>
-            <h3>
-              {{ sec.title }}{% if sec.title_ko %}<span class="ppl-cv-ko" lang="ko">{{ sec.title_ko }}</span>{% endif %}
-            </h3>
+  {% assign cv_columns = site.data.pi_cv.columns %}
+  {% if cv_columns and cv_columns != empty %}
+    <div class="ppl-profile-block" aria-label="Selected profile">
+      <div class="ppl-profile-label">
+        Selected Profile
+        <span class="ppl-profile-label-ko" lang="ko">주요 이력</span>
+      </div>
 
-            <ul>
-              {% for item in sec.items %}
-                <li>
-                  {% if item.when %}<span class="ppl-cv-when">{{ item.when }}</span>{% endif %}
-                  <span class="ppl-cv-what">{{ item.what }}</span>
-                  {% if item.where %}<span class="ppl-cv-where">{{ item.where }}</span>{% endif %}
-                </li>
-              {% endfor %}
-            </ul>
-          </section>
+      <div class="ppl-cv">
+        {% for column in cv_columns %}
+          <div class="ppl-cv-column">
+            {% for sec in column.sections %}
+              <section class="ppl-cv-section">
+                <h3>
+                  {{ sec.title }}{% if sec.title_ko %}<span class="ppl-cv-ko" lang="ko">{{ sec.title_ko }}</span>{% endif %}
+                </h3>
+
+                <ul>
+                  {% for item in sec.items %}
+                    <li>
+                      {% if item.when %}<span class="ppl-cv-when">{{ item.when }}</span>{% endif %}
+                      <span class="ppl-cv-what">{{ item.what }}</span>
+                      {% if item.where %}<span class="ppl-cv-where">{{ item.where }}</span>{% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+              </section>
+            {% endfor %}
+          </div>
         {% endfor %}
       </div>
     </div>
@@ -558,7 +564,7 @@ nav_order: 4
 
     <div class="ppl-grid">
       {% for m in grads %}
-        <article class="ppl-member{% unless m.topic %} ppl-member-no-topic{% endunless %}">
+        <article class="ppl-member">
           {% if m.image %}
             <img
               class="ppl-photo"
@@ -585,15 +591,9 @@ nav_order: 4
               {{ m.role }}{% if m.joined %}<span class="ppl-joined"> · Joined {{ m.joined }}</span>{% endif %}
             </p>
 
-            {% if m.email %}
-              <p class="ppl-email">
-                <a href="mailto:{{ m.email }}">{{ m.email }}</a>
-              </p>
-            {% endif %}
-
             {% if m.topic %}
               <p class="ppl-topic">
-                <span class="ppl-topic-label">Research focus</span>
+                <span class="ppl-topic-label">Research Focus</span>
                 {{ m.topic }}
               </p>
             {% endif %}
@@ -614,7 +614,7 @@ nav_order: 4
 
     <div class="ppl-grid">
       {% for m in undergrads %}
-        <article class="ppl-member{% unless m.topic %} ppl-member-no-topic{% endunless %}">
+        <article class="ppl-member">
           {% if m.image %}
             <img
               class="ppl-photo"
@@ -641,15 +641,9 @@ nav_order: 4
               {{ m.role }}{% if m.joined %}<span class="ppl-joined"> · Joined {{ m.joined }}</span>{% endif %}
             </p>
 
-            {% if m.email %}
-              <p class="ppl-email">
-                <a href="mailto:{{ m.email }}">{{ m.email }}</a>
-              </p>
-            {% endif %}
-
             {% if m.topic %}
               <p class="ppl-topic">
-                <span class="ppl-topic-label">Research focus</span>
+                <span class="ppl-topic-label">Research Involvement</span>
                 {{ m.topic }}
               </p>
             {% endif %}
@@ -662,10 +656,10 @@ nav_order: 4
 
 {% assign shared_contact = site.data.members.shared_contact %}
 {% if shared_contact %}
-  <aside class="ppl-shared-contact" aria-label="Student office and shared lab contact">
+  <aside class="ppl-shared-contact" aria-label="Student workspace and shared telephone">
     <div class="ppl-shared-contact-item">
       <span class="ppl-shared-contact-label">
-        Student Office
+        Student Workspace
         <span class="ppl-shared-contact-ko" lang="ko">학생 연구공간</span>
       </span>
       <p class="ppl-shared-contact-value">
@@ -676,7 +670,7 @@ nav_order: 4
 
     <div class="ppl-shared-contact-item">
       <span class="ppl-shared-contact-label">
-        Shared Lab Phone
+        Shared Phone
         <span class="ppl-shared-contact-ko" lang="ko">공용 전화</span>
       </span>
       <p class="ppl-shared-contact-value">
