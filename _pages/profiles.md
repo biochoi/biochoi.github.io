@@ -172,26 +172,36 @@ nav_order: 4
     line-height: 1.5;
   }
 
-  /* Member grid: four columns on desktop */
+  /* Student profiles: generous two-column layout on desktop */
   .ppl-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 2.4rem 1.45rem;
-    margin: 2rem 0 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.9rem 2.4rem;
+    margin: 2.25rem 0 1.2rem;
   }
 
   .ppl-member {
+    display: grid;
+    grid-template-columns: 165px minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: start;
     min-width: 0;
+    padding-bottom: 1.7rem;
+    border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
   }
 
   .ppl-photo,
   .ppl-photo-blank {
     display: block;
     width: 100%;
-    height: 215px;
+    aspect-ratio: 4 / 5;
     border-radius: 8px;
     object-fit: cover;
     background: var(--global-divider-color, #e8e8e8);
+  }
+
+  .ppl-photo {
+    height: auto;
   }
 
   .ppl-photo-blank {
@@ -203,10 +213,19 @@ nav_order: 4
     font-weight: 700;
   }
 
+  .ppl-member-copy {
+    min-width: 0;
+    padding-top: 0.05rem;
+  }
+
+  .ppl-member-no-topic .ppl-member-copy {
+    align-self: center;
+  }
+
   .ppl-name {
-    margin: 0.8rem 0 0.18rem;
+    margin: 0 0 0.28rem;
     color: var(--joinus-accent, #1a3a6b);
-    font-size: 0.98rem;
+    font-size: 1.08rem;
     font-weight: 700;
     line-height: 1.4;
   }
@@ -214,8 +233,8 @@ nav_order: 4
   .ppl-role {
     margin: 0;
     color: var(--global-text-color-light);
-    font-size: 0.82rem;
-    line-height: 1.5;
+    font-size: 0.86rem;
+    line-height: 1.55;
   }
 
   .ppl-joined {
@@ -223,9 +242,20 @@ nav_order: 4
   }
 
   .ppl-topic {
-    margin: 0.48rem 0 0;
-    font-size: 0.84rem;
-    line-height: 1.55;
+    margin: 0.95rem 0 0;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .ppl-topic-label {
+    display: block;
+    margin-bottom: 0.24rem;
+    color: var(--global-theme-color, #1a4d3e);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.065em;
+    line-height: 1.35;
+    text-transform: uppercase;
   }
 
   /* Alumni */
@@ -301,8 +331,12 @@ nav_order: 4
 
   @media (max-width: 900px) {
     .ppl-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 2.1rem 1.3rem;
+      grid-template-columns: 1fr;
+      gap: 2.25rem;
+    }
+
+    .ppl-member {
+      grid-template-columns: 175px minmax(0, 1fr);
     }
   }
 
@@ -331,17 +365,40 @@ nav_order: 4
     }
   }
 
-  @media (max-width: 420px) {
-    .ppl-grid {
-      gap: 1.8rem 0.9rem;
+  @media (max-width: 560px) {
+    .ppl-member {
+      grid-template-columns: 125px minmax(0, 1fr);
+      gap: 1rem;
     }
 
     .ppl-name {
-      font-size: 0.93rem;
+      font-size: 1rem;
     }
 
     .ppl-topic {
-      font-size: 0.8rem;
+      margin-top: 0.75rem;
+      font-size: 0.86rem;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .ppl-grid {
+      gap: 2.1rem;
+    }
+
+    .ppl-member {
+      grid-template-columns: 1fr;
+      gap: 0.95rem;
+      padding-bottom: 1.8rem;
+    }
+
+    .ppl-photo,
+    .ppl-photo-blank {
+      width: min(220px, 72vw);
+    }
+
+    .ppl-member-no-topic .ppl-member-copy {
+      align-self: start;
     }
   }
 </style>
@@ -425,7 +482,7 @@ nav_order: 4
 
     <div class="ppl-grid">
       {% for m in grads %}
-        <article class="ppl-member">
+        <article class="ppl-member{% unless m.topic %} ppl-member-no-topic{% endunless %}">
           {% if m.image %}
             <img
               class="ppl-photo"
@@ -443,15 +500,22 @@ nav_order: 4
             </div>
           {% endif %}
 
-          <p class="ppl-name">
-            {{ m.name_en }}{% if m.name_ko %}<span class="ppl-name-ko" lang="ko">{{ m.name_ko }}</span>{% endif %}
-          </p>
+          <div class="ppl-member-copy">
+            <h3 class="ppl-name">
+              {{ m.name_en }}{% if m.name_ko %}<span class="ppl-name-ko" lang="ko">{{ m.name_ko }}</span>{% endif %}
+            </h3>
 
-          <p class="ppl-role">
-            {{ m.role }}{% if m.joined %}<span class="ppl-joined"> · Joined {{ m.joined }}</span>{% endif %}
-          </p>
+            <p class="ppl-role">
+              {{ m.role }}{% if m.joined %}<span class="ppl-joined"> · Joined {{ m.joined }}</span>{% endif %}
+            </p>
 
-          {% if m.topic %}<p class="ppl-topic">{{ m.topic }}</p>{% endif %}
+            {% if m.topic %}
+              <p class="ppl-topic">
+                <span class="ppl-topic-label">Research focus</span>
+                {{ m.topic }}
+              </p>
+            {% endif %}
+          </div>
         </article>
       {% endfor %}
     </div>
@@ -468,7 +532,7 @@ nav_order: 4
 
     <div class="ppl-grid">
       {% for m in undergrads %}
-        <article class="ppl-member">
+        <article class="ppl-member{% unless m.topic %} ppl-member-no-topic{% endunless %}">
           {% if m.image %}
             <img
               class="ppl-photo"
@@ -486,15 +550,22 @@ nav_order: 4
             </div>
           {% endif %}
 
-          <p class="ppl-name">
-            {{ m.name_en }}{% if m.name_ko %}<span class="ppl-name-ko" lang="ko">{{ m.name_ko }}</span>{% endif %}
-          </p>
+          <div class="ppl-member-copy">
+            <h3 class="ppl-name">
+              {{ m.name_en }}{% if m.name_ko %}<span class="ppl-name-ko" lang="ko">{{ m.name_ko }}</span>{% endif %}
+            </h3>
 
-          <p class="ppl-role">
-            {{ m.role }}{% if m.joined %}<span class="ppl-joined"> · Joined {{ m.joined }}</span>{% endif %}
-          </p>
+            <p class="ppl-role">
+              {{ m.role }}{% if m.joined %}<span class="ppl-joined"> · Joined {{ m.joined }}</span>{% endif %}
+            </p>
 
-          {% if m.topic %}<p class="ppl-topic">{{ m.topic }}</p>{% endif %}
+            {% if m.topic %}
+              <p class="ppl-topic">
+                <span class="ppl-topic-label">Research focus</span>
+                {{ m.topic }}
+              </p>
+            {% endif %}
+          </div>
         </article>
       {% endfor %}
     </div>
