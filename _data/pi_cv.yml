@@ -120,6 +120,6 @@ columns:
             where: "한국생물공학회"
 
           - when: "2005"
-            what: "우수논문상"
-            where: "CJ BIO"
+            what: "CJ BIO 우수논문상"
+            where: "한국화학공학회"
 
