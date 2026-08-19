@@ -2,7 +2,7 @@
 layout: page
 title: Join Us
 permalink: /joinus/
-description:
+description: Graduate and undergraduate research opportunities at the BioMolE Lab, Chungnam National University.
 nav: true
 nav_order: 5
 ---
