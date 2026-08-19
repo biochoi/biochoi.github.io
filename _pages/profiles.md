@@ -621,12 +621,11 @@ nav_order: 4
       </p>
 
       <p class="ppl-pi-bio">
-        Prof. Choi investigates how molecular interactions govern biomolecular
-        organization and how these principles can be translated into functional
-        biomaterials, biocatalysis, and bioprocesses. His research integrates
-        protein engineering, quantitative biophysics, synthetic biology, and
-        bioprocess engineering.
-      </p>
+        Prof. Choi’s research focuses mainly on proteins and how their sequences,
+        structures, and interactions shape assembly and function. His major research
+        area include biomolecular condensates and enzyme engineering, with
+        applications in functional biomaterials and bioprocesses.
+       </p>
 
       <nav class="ppl-pi-links" aria-label="Principal investigator links">
         <a href="{{ '/research/' | relative_url }}">Research</a>
