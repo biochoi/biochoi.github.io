@@ -3,9 +3,9 @@
 # Student photographs are stored under:
 # assets/img/members/
 #
-# Graduate students have a broad research-focus line.
-# Undergraduate researchers intentionally omit the topic field.
-# Student e-mail addresses are displayed as clickable mail links.
+# Personal e-mail addresses are intentionally not displayed on the People page.
+# Graduate students use "Research Focus".
+# Undergraduate students use "Research Involvement".
 
 shared_contact:
   room_en: "Engineering Building 1, Room 153-3"
@@ -17,7 +17,6 @@ graduate:
   - name_en: "Hyunsuk Choi"
     name_ko: "최현석"
     role: "Ph.D. Student"
-    email: "chs930227@gmail.com"
     topic: "Biomolecular condensates and functional biomaterials"
     image: "hyunsuk-choi.jpg"
     photo_position: "center center"
@@ -26,7 +25,6 @@ graduate:
   - name_en: "Jaemin Han"
     name_ko: "한재민"
     role: "M.S. Student"
-    email: "woalsdl4605@naver.com"
     topic: "Protein engineering and bioprocess applications"
     image: "jaemin-han.jpg"
     photo_position: "center center"
@@ -35,7 +33,6 @@ graduate:
   - name_en: "Chanmi Oh"
     name_ko: "오찬미"
     role: "M.S. Student"
-    email: "ocm0401@naver.com"
     topic: "Microencapsulation and artificial cell systems"
     image: "chanmi-oh.jpg"
     photo_position: "center center"
@@ -44,7 +41,6 @@ graduate:
   - name_en: "Juhui Jeon"
     name_ko: "전주희"
     role: "M.S. Student"
-    email: "iuye124@naver.com"
     topic: "Enzyme systems and compartmentalized biocatalysis"
     image: "juhui-jeon.jpg"
     photo_position: "center center"
@@ -54,7 +50,7 @@ undergraduate:
   - name_en: "Hyeonsu Park"
     name_ko: "박현수"
     role: "Undergraduate Researcher"
-    email: "67h999@naver.com"
+    topic: "Biomolecular engineering research"
     image: "hyeonsu-park.jpg"
     photo_position: "center center"
     initials: "HP"
@@ -62,18 +58,18 @@ undergraduate:
   - name_en: "Hojoong Kim"
     name_ko: "김호중"
     role: "Undergraduate Researcher"
-    email: "khoj02@naver.com"
+    topic: "Biomolecular engineering research"
     image: "h-kim.jpg"
     photo_position: "center center"
     initials: "HK"
 
   # Add the two students joining in September 2026 after their
-  # English names, e-mail addresses, and photographs are confirmed.
+  # English names and photographs are confirmed.
   #
   # - name_en: "English Name"
   #   name_ko: "한글 이름"
   #   role: "Undergraduate Researcher"
-  #   email: "student@example.com"
+  #   topic: "Biomolecular engineering research"
   #   image: "english-name.jpg"
   #   photo_position: "center center"
   #   initials: "EN"
