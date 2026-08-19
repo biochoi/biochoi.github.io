@@ -237,6 +237,26 @@ nav_order: 4
     line-height: 1.55;
   }
 
+  .ppl-email {
+    margin: 0.38rem 0 0;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  .ppl-email a,
+  .ppl-email a:visited {
+    color: var(--global-theme-color, #1a4d3e);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .ppl-email a:hover,
+  .ppl-email a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
   .ppl-joined {
     white-space: nowrap;
   }
@@ -256,6 +276,57 @@ nav_order: 4
     letter-spacing: 0.065em;
     line-height: 1.35;
     text-transform: uppercase;
+  }
+
+  /* Shared student office and lab contact: simple ruled layout */
+  .ppl-shared-contact {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem 2.8rem;
+    margin: 3.1rem 0 0.8rem;
+    padding: 1.35rem 0;
+    border-top: 1px solid var(--global-divider-color, #e0e0e0);
+    border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
+  }
+
+  .ppl-shared-contact-item {
+    min-width: 0;
+  }
+
+  .ppl-shared-contact-label {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--joinus-accent, #1a3a6b);
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .ppl-shared-contact-ko {
+    margin-left: 0.38rem;
+    color: var(--global-text-color-light);
+    font-size: 0.82rem;
+    font-weight: 400;
+  }
+
+  .ppl-shared-contact-value {
+    margin: 0;
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .ppl-shared-contact-value a,
+  .ppl-shared-contact-value a:visited {
+    color: var(--global-theme-color, #1a4d3e);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .ppl-shared-contact-value a:hover,
+  .ppl-shared-contact-value a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   /* Alumni */
@@ -358,6 +429,11 @@ nav_order: 4
     .ppl-cv {
       grid-template-columns: 1fr;
       gap: 2.1rem;
+    }
+
+    .ppl-shared-contact {
+      grid-template-columns: 1fr;
+      gap: 1.15rem;
     }
 
     .ppl-joinus {
@@ -490,8 +566,8 @@ nav_order: 4
               alt="Portrait of {{ m.name_en }}"
               loading="lazy"
               decoding="async"
-              width="800"
-              height="1000"
+              width="600"
+              height="750"
               style="object-position: {{ m.photo_position | default: 'center 25%' }};"
             >
           {% else %}
@@ -508,6 +584,12 @@ nav_order: 4
             <p class="ppl-role">
               {{ m.role }}{% if m.joined %}<span class="ppl-joined"> · Joined {{ m.joined }}</span>{% endif %}
             </p>
+
+            {% if m.email %}
+              <p class="ppl-email">
+                <a href="mailto:{{ m.email }}">{{ m.email }}</a>
+              </p>
+            {% endif %}
 
             {% if m.topic %}
               <p class="ppl-topic">
@@ -540,8 +622,8 @@ nav_order: 4
               alt="Portrait of {{ m.name_en }}"
               loading="lazy"
               decoding="async"
-              width="800"
-              height="1000"
+              width="600"
+              height="750"
               style="object-position: {{ m.photo_position | default: 'center 25%' }};"
             >
           {% else %}
@@ -559,6 +641,12 @@ nav_order: 4
               {{ m.role }}{% if m.joined %}<span class="ppl-joined"> · Joined {{ m.joined }}</span>{% endif %}
             </p>
 
+            {% if m.email %}
+              <p class="ppl-email">
+                <a href="mailto:{{ m.email }}">{{ m.email }}</a>
+              </p>
+            {% endif %}
+
             {% if m.topic %}
               <p class="ppl-topic">
                 <span class="ppl-topic-label">Research focus</span>
@@ -570,6 +658,32 @@ nav_order: 4
       {% endfor %}
     </div>
   </section>
+{% endif %}
+
+{% assign shared_contact = site.data.members.shared_contact %}
+{% if shared_contact %}
+  <aside class="ppl-shared-contact" aria-label="Student office and shared lab contact">
+    <div class="ppl-shared-contact-item">
+      <span class="ppl-shared-contact-label">
+        Student Office
+        <span class="ppl-shared-contact-ko" lang="ko">학생 연구공간</span>
+      </span>
+      <p class="ppl-shared-contact-value">
+        {{ shared_contact.room_en }}<br>
+        <span lang="ko">{{ shared_contact.room_ko }}</span>
+      </p>
+    </div>
+
+    <div class="ppl-shared-contact-item">
+      <span class="ppl-shared-contact-label">
+        Shared Lab Phone
+        <span class="ppl-shared-contact-ko" lang="ko">공용 전화</span>
+      </span>
+      <p class="ppl-shared-contact-value">
+        <a href="tel:{{ shared_contact.phone_href }}">{{ shared_contact.phone }}</a>
+      </p>
+    </div>
+  </aside>
 {% endif %}
 
 {% assign alumni = site.data.members.alumni %}
@@ -624,3 +738,4 @@ nav_order: 4
     Join Us <span aria-hidden="true">→</span>
   </a>
 </section>
+
