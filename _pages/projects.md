@@ -2,7 +2,7 @@
 layout: page
 title: Research
 permalink: /research/
-description:
+description: Protein-based research on biomolecular condensates, enzyme engineering, biointerfaces, and bioprocesses at the BioMolE Lab.
 nav: true
 nav_order: 1
 ---
