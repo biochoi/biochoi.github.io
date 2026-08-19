@@ -54,8 +54,8 @@ latest_posts:
     }
 
     /* 소개글이 사진·연락처 아래로 파고들지 않게 함 */
-    .post article > .clearfix {
-      display: flow-root;
+    .post article > .clearfix > p {
+      overflow: hidden;
     }
   }
 
