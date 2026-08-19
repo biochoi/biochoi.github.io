@@ -1,89 +1,125 @@
-# ═══════════════════════════════════════════════════════════
-# PI 이력 — People 페이지에 표시됩니다
+# PI profile information displayed under the Principal Investigator section.
 #
-# 구조가 단순합니다. 모든 섹션이 똑같은 형식입니다.
+# The page uses two columns:
+#   left column  - education, academic appointments, professional service
+#   right column - academic-society service, selected honors and awards
 #
-#   - title:     섹션 제목 (아무 이름이나 자유롭게)
-#     title_ko:  국문 부제 (생략 가능)
-#     items:
-#       - when:  기간 또는 연도 (생략 가능)
-#         what:  직위 · 학위 · 상 이름 등
-#         where: 소속 기관 · 수여 기관 (생략 가능)
-#
-# 섹션을 추가하려면 아래 목록에 블록을 하나 더 붙이면 됩니다.
-# 순서를 바꾸려면 블록 위치를 옮기면 됩니다.
-# ═══════════════════════════════════════════════════════════
+# Each item follows the same structure:
+#   when:  period or year
+#   what:  degree, position, role, or award
+#   where: institution or organization
 
-sections:
-  - title: Education
-    title_ko: 학력
-    items:
-      - when: "2000.03 – 2005.08"
-        what: "Ph.D., Chemical Engineering"
-        where: "School of Chemical Engineering, Seoul National University"
+columns:
+  - sections:
+      - title: "Education"
+        title_ko: "학력"
+        items:
+          - when: "2000.03–2005.08"
+            what: "Ph.D., Chemical Engineering"
+            where: "School of Chemical Engineering, Seoul National University"
 
-      - when: "1998.03 – 2000.02"
-        what: "M.S., Chemical Engineering"
-        where: "Seoul National University"
+          - when: "1998.03–2000.02"
+            what: "M.S., Chemical Engineering"
+            where: "Seoul National University"
 
-      - when: "1994.03 – 1998.02"
-        what: "B.S., Chemical Engineering"
-        where: "Seoul National University"
+          - when: "1994.03–1998.02"
+            what: "B.S., Chemical Engineering"
+            where: "Seoul National University"
 
-  - title: Professional Experience
-    title_ko: 경력
-    items:
-      - when: "2019.09 – present"
-        what: "Professor"
-        where: "Dept. of Chemical Engineering & Applied Chemistry, Chungnam National University"
+      - title: "Academic Appointments"
+        title_ko: "재직 경력"
+        items:
+          - when: "2019.09–Present"
+            what: "Professor"
+            where: "Dept. of Chemical Engineering & Applied Chemistry, Chungnam National University"
 
-      - when: "2015.09 – 2019.08"
-        what: "Associate Professor"
-        where: "Dept. of Chemical Engineering & Applied Chemistry, Chungnam National University"
+          - when: "2015.09–2019.08"
+            what: "Associate Professor"
+            where: "Dept. of Chemical Engineering & Applied Chemistry, Chungnam National University"
 
-      - when: "2017.02 – 2018.02"
-        what: "Visiting Professor"
-        where: "Dept. of Biology, University of Texas at Arlington, USA"
+          - when: "2017.02–2018.02"
+            what: "Visiting Professor"
+            where: "Dept. of Biology, University of Texas at Arlington, USA"
 
-      - when: "2011.08 – 2015.08"
-        what: "Assistant Professor"
-        where: "Dept. of Chemical Engineering & Applied Chemistry, Chungnam National University"
+          - when: "2011.08–2015.08"
+            what: "Assistant Professor"
+            where: "Dept. of Chemical Engineering & Applied Chemistry, Chungnam National University"
 
-      - when: "2008.03 – 2011.08"
-        what: "Research Assistant Professor"
-        where: "Dept. of Chemical Engineering, Pohang University of Science & Technology (POSTECH)"
+          - when: "2008.03–2011.08"
+            what: "Research Assistant Professor"
+            where: "Dept. of Chemical Engineering, Pohang University of Science & Technology (POSTECH)"
 
-      - when: "2006.03 – 2008.03"
-        what: "Postdoctoral Research Associate"
-        where: "Dept. of Chemical & Biomolecular Engineering, University of Illinois at Urbana-Champaign, USA"
+          - when: "2006.03–2008.03"
+            what: "Postdoctoral Research Associate"
+            where: "Dept. of Chemical & Biomolecular Engineering, University of Illinois at Urbana-Champaign, USA"
 
-      - when: "2005.10 – 2006.10"
-        what: "Postdoctoral Researcher"
-        where: "Institute of Molecular Biology & Genetics, S. Korea"
+          - when: "2005.10–2006.10"
+            what: "Postdoctoral Researcher"
+            where: "Institute of Molecular Biology & Genetics, S. Korea"
 
-# ═══════════════════════════════════════════════════════════
-# 앞으로 추가하실 섹션의 예시입니다.
-# 내용이 준비되면 주석(#)을 지우고 위 목록에 이어 붙이세요.
-# 들여쓰기는 "- title:" 이 공백 2칸에서 시작합니다.
-# ═══════════════════════════════════════════════════════════
-#
-#  - title: Awards & Honors
-#    title_ko: 수상
-#    items:
-#      - when: "2024"
-#        what: "상 이름"
-#        where: "수여 기관"
-#
-#  - title: Research Grants
-#    title_ko: 연구과제
-#    items:
-#      - when: "2024.03 – 2027.02"
-#        what: "과제명"
-#        where: "지원 기관 · 역할"
-#
-#  - title: Professional Activities
-#    title_ko: 학회 활동
-#    items:
-#      - when: "2023 – present"
-#        what: "Editorial Board Member"
-#        where: "학술지 이름"
+      - title: "Professional Appointments & Service"
+        title_ko: "주요 보직 및 전문활동"
+        items:
+          - when: "2025.07.01–Present"
+            what: "단장"
+            where: "과학기술정보통신부 합성생물학 초광역권 융합인재양성사업단"
+
+          - when: "2024.06.27–Present"
+            what: "위원"
+            where: "산업통상자원부 산업용 유전자변형생물체 위해성심사 전문가심사위원회"
+
+          - when: "2022.11.01–2024.10.31"
+            what: "전문위원"
+            where: "한국연구재단 기초연구본부 공학단"
+
+  - sections:
+      - title: "Academic Society Service"
+        title_ko: "주요 학회 활동"
+        items:
+          - when: "2026.01.01–Present"
+            what: "공동위원장"
+            where: "한국생물공학회 미디어홍보위원회"
+
+          - when: "2025.01.01–2025.12.31"
+            what: "공동위원장"
+            where: "한국생물공학회 조직위원회"
+
+          - when: "2026.01.01–Present"
+            what: "감사"
+            where: "한국해양바이오학회"
+
+          - when: "2022.01.01–2023.12.31"
+            what: "총무이사"
+            where: "한국해양바이오학회"
+
+          - when: "2022.01.01–2022.12.31"
+            what: "제53대 사업이사"
+            where: "한국화학공학회"
+
+          - when: "2021.01.01–2021.12.31"
+            what: "총무간사"
+            where: "한국화학공학회 생물화공부문위원회"
+
+      - title: "Selected Honors & Awards"
+        title_ko: "주요 수상"
+        items:
+          - when: "2024"
+            what: "우수연구자상"
+            where: "한국해양바이오학회"
+
+          - when: "2022"
+            what: "생물공학 연구자상"
+            where: "한국생물공학회"
+
+          - when: "2021"
+            what: "표창장"
+            where: "한국공학교육인증원"
+
+          - when: "2013"
+            what: "신인학술상"
+            where: "한국생물공학회"
+
+          - when: "2005"
+            what: "CJ BIO 우수논문상"
+            where: "한국화학공학회"
+
