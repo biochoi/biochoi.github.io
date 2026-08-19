@@ -1,31 +1,73 @@
-# BioMolE Lab member data
-# Members are displayed in the order listed below.
-# Upload photographs to: assets/img/members/
-# Recommended photo: 4:5 portrait, at least 800 x 1000 px.
-# photo_position is optional and can be adjusted, e.g. "center 20%".
+# BioMolE Lab members
+#
+# Student photographs are stored under:
+# assets/img/members/
+#
+# Graduate students have a broad research-focus line.
+# Undergraduate researchers intentionally omit the topic field.
 
 graduate:
-   - name_en: "Example Graduate Student"
-     name_ko: "예시 대학원생"
-     role: "Ph.D. Student"
-     topic: "Sequence-dependent coacervation of intrinsically disordered proteins"
-     image: "example-graduate.jpg"
-     photo_position: "center 25%"
-     initials: "EG"
+  - name_en: "Hyunsuk Choi"
+    name_ko: "최현석"
+    role: "Ph.D. Student"
+    topic: "Biomolecular condensates and functional biomaterials"
+    image: "hyunsuk-choi.jpg"
+    photo_position: "center center"
+    initials: "HC"
+
+  - name_en: "Jaemin Han"
+    name_ko: "한재민"
+    role: "M.S. Student"
+    topic: "Protein engineering and bioprocess applications"
+    image: "jaemin-han.jpg"
+    photo_position: "center center"
+    initials: "JH"
+
+  - name_en: "Chanmi Oh"
+    name_ko: "오찬미"
+    role: "M.S. Student"
+    topic: "Microencapsulation and artificial cell systems"
+    image: "chanmi-oh.jpg"
+    photo_position: "center center"
+    initials: "CO"
+
+  - name_en: "Juhui Jeon"
+    name_ko: "전주희"
+    role: "M.S. Student"
+    topic: "Enzyme systems and compartmentalized biocatalysis"
+    image: "juhui-jeon.jpg"
+    photo_position: "center center"
+    initials: "JJ"
 
 undergraduate:
-   - name_en: "Example Undergraduate Researcher"
-     name_ko: "예시 학부연구생"
-     role: "Undergraduate Researcher"
-     topic: "Interfacial characterization of protein condensates"
-     image: "example-undergraduate.jpg"
-     photo_position: "center 25%"
-     initials: "EU"
+  - name_en: "Hyeonsu Park"
+    name_ko: "박현수"
+    role: "Undergraduate Researcher"
+    initials: "HP"
+
+  - name_en: "Hojoong Kim"
+    name_ko: "김호중"
+    role: "Undergraduate Researcher"
+    image: "h-kim.jpg"
+    photo_position: "center center"
+    initials: "HK"
+
+  # Add the two students joining in September 2026 after their
+  # English names and photographs are confirmed.
+  #
+  # - name_en: "English Name"
+  #   name_ko: "한글 이름"
+  #   role: "Undergraduate Researcher"
+  #   image: "english-name.jpg"
+  #   photo_position: "center center"
+  #   initials: "EN"
 
 alumni:
+  # Add alumni records here when needed.
+  #
   # - name_en: "Example Alumnus"
-  #   name_ko: "예시 졸업생"
+  #   name_ko: "예시"
   #   degree: "M.S."
   #   year: 2030
-  #   thesis: "Title of the thesis"
-  #   position: "Current position and affiliation"
+  #   thesis: "Thesis title"
+  #   position: "Current position"
