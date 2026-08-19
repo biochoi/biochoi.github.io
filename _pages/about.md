@@ -45,7 +45,7 @@ latest_posts:
 
   @media (min-width: 768px) {
     .profile {
-      margin-top: 0rem;
+      margin-top: 1.5rem;
     }
 
     .profile .more-info {
