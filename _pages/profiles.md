@@ -53,7 +53,7 @@ nav_order: 4
     object-fit: cover;
     object-position: center 20%;
   }
-  
+
   .ppl-pi-name {
     margin: 0 0 0.25rem;
     color: var(--joinus-accent, #1a3a6b);
@@ -100,6 +100,70 @@ nav_order: 4
   .ppl-pi-links a:focus-visible {
     text-decoration: underline;
     text-underline-offset: 4px;
+  }
+
+  /* Curriculum vitae */
+  .ppl-cv {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.4rem 2.8rem;
+    align-items: start;
+    margin: 2.1rem 0 1rem;
+  }
+
+  .ppl-cv h3 {
+    margin: 0 0 1.05rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
+    color: var(--joinus-accent, #1a3a6b);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .ppl-cv-ko {
+    margin-left: 0.45rem;
+    color: var(--global-text-color-light);
+    font-size: 0.83rem;
+    font-weight: 400;
+  }
+
+  .ppl-cv ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .ppl-cv li {
+    margin-bottom: 1.1rem;
+  }
+
+  .ppl-cv li:last-child {
+    margin-bottom: 0;
+  }
+
+  .ppl-cv-when {
+    display: block;
+    margin-bottom: 0.1rem;
+    color: var(--global-text-color-light);
+    font-size: 0.79rem;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
+  }
+
+  .ppl-cv-what {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 650;
+    line-height: 1.45;
+  }
+
+  .ppl-cv-where {
+    display: block;
+    margin-top: 0.08rem;
+    color: var(--global-text-color-light);
+    font-size: 0.84rem;
+    line-height: 1.5;
   }
 
   /* Member grid: exactly four columns on desktop */
@@ -251,6 +315,11 @@ nav_order: 4
       font-size: 1.38rem;
     }
 
+    .ppl-cv {
+      grid-template-columns: 1fr;
+      gap: 2.1rem;
+    }
+
     .ppl-joinus {
       grid-template-columns: 1fr;
     }
@@ -312,6 +381,34 @@ nav_order: 4
     </nav>
   </div>
 </section>
+
+{% assign cv_sections = site.data.pi_cv.sections %}
+{% if cv_sections and cv_sections != empty %}
+  <h2 class="ppl-head">
+    Curriculum Vitae
+    <span class="ppl-head-ko" lang="ko">주요 이력</span>
+  </h2>
+
+  <div class="ppl-cv">
+    {% for sec in cv_sections %}
+      <section>
+        <h3>
+          {{ sec.title }}{% if sec.title_ko %}<span class="ppl-cv-ko" lang="ko">{{ sec.title_ko }}</span>{% endif %}
+        </h3>
+
+        <ul>
+          {% for item in sec.items %}
+            <li>
+              {% if item.when %}<span class="ppl-cv-when">{{ item.when }}</span>{% endif %}
+              <span class="ppl-cv-what">{{ item.what }}</span>
+              {% if item.where %}<span class="ppl-cv-where">{{ item.where }}</span>{% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endfor %}
+  </div>
+{% endif %}
 
 {% assign grads = site.data.members.graduate %}
 {% if grads and grads != empty %}
@@ -445,4 +542,3 @@ nav_order: 4
     Join Us <span aria-hidden="true">→</span>
   </a>
 </section>
-
