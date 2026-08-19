@@ -50,7 +50,7 @@
     object-fit: cover;
     object-position: center 20%;
   }
-  
+
   .ppl-pi-name {
     margin: 0 0 0.25rem;
     color: var(--joinus-accent, #1a3a6b);
@@ -97,6 +97,70 @@
   .ppl-pi-links a:focus-visible {
     text-decoration: underline;
     text-underline-offset: 4px;
+  }
+
+  /* Curriculum vitae */
+  .ppl-cv {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.4rem 2.8rem;
+    align-items: start;
+    margin: 2.1rem 0 1rem;
+  }
+
+  .ppl-cv h3 {
+    margin: 0 0 1.05rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
+    color: var(--joinus-accent, #1a3a6b);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .ppl-cv-ko {
+    margin-left: 0.45rem;
+    color: var(--global-text-color-light);
+    font-size: 0.83rem;
+    font-weight: 400;
+  }
+
+  .ppl-cv ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .ppl-cv li {
+    margin-bottom: 1.1rem;
+  }
+
+  .ppl-cv li:last-child {
+    margin-bottom: 0;
+  }
+
+  .ppl-cv-when {
+    display: block;
+    margin-bottom: 0.1rem;
+    color: var(--global-text-color-light);
+    font-size: 0.79rem;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
+  }
+
+  .ppl-cv-what {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 650;
+    line-height: 1.45;
+  }
+
+  .ppl-cv-where {
+    display: block;
+    margin-top: 0.08rem;
+    color: var(--global-text-color-light);
+    font-size: 0.84rem;
+    line-height: 1.5;
   }
 
   /* Member grid: exactly four columns on desktop */
@@ -248,6 +312,11 @@
       font-size: 1.38rem;
     }
 
+    .ppl-cv {
+      grid-template-columns: 1fr;
+      gap: 2.1rem;
+    }
+
     .ppl-joinus {
       grid-template-columns: 1fr;
     }
@@ -266,7 +335,7 @@
       font-size: 0.8rem;
     }
   }
-</style> <h2 class="ppl-head"> Principal Investigator <span class="ppl-head-ko" lang="ko">연구책임자</span> </h2> <section class="ppl-pi" aria-label="Principal Investigator"> <img class="ppl-pi-photo" src="/assets/img/prof_pic.jpg" alt="Portrait of Prof. Yoo Seong Choi" width="800" height="1000"> <div> <p class="ppl-pi-name"> Yoo Seong Choi <span class="ppl-name-ko" lang="ko">최유성</span> </p> <p class="ppl-pi-role"> Professor, Department of Chemical Engineering and Applied Chemistry<br> Chungnam National University<br> <a href="mailto:biochoi@cnu.ac.kr">biochoi@cnu.ac.kr</a> </p> <p class="ppl-pi-bio"> Prof. Choi's research examines how molecular interactions organize biomolecules and how these principles can be translated into functional biomaterials, biocatalysis, and bioprocesses. The laboratory integrates protein engineering, quantitative biophysics, synthetic biology, and bioprocess engineering. </p> <nav class="ppl-pi-links" aria-label="Principal investigator links"> <a href="/research/">Research</a> <a href="/publications/">Publications</a> <a href="/contact/">Contact</a> </nav> </div> </section> <h2 class="ppl-head"> Graduate Students <span class="ppl-head-ko" lang="ko">대학원생</span> </h2> <div class="ppl-grid"> <article class="ppl-member"> <img class="ppl-photo" src="/assets/img/members/example-graduate.jpg" alt="Portrait of Example Graduate Student" loading="lazy" decoding="async" width="800" height="1000" style="object-position: center 25%;"> <p class="ppl-name"> Example Graduate Student<span class="ppl-name-ko" lang="ko">예시 대학원생</span> </p> <p class="ppl-role"> Ph.D. Student </p> <p class="ppl-topic">Sequence-dependent coacervation of intrinsically disordered proteins</p> </article> </div> <h2 class="ppl-head"> Undergraduate Researchers <span class="ppl-head-ko" lang="ko">학부연구생</span> </h2> <div class="ppl-grid"> <article class="ppl-member"> <img class="ppl-photo" src="/assets/img/members/example-undergraduate.jpg" alt="Portrait of Example Undergraduate Researcher" loading="lazy" decoding="async" width="800" height="1000" style="object-position: center 25%;"> <p class="ppl-name"> Example Undergraduate Researcher<span class="ppl-name-ko" lang="ko">예시 학부연구생</span> </p> <p class="ppl-role"> Undergraduate Researcher </p> <p class="ppl-topic">Interfacial characterization of protein condensates</p> </article> </div> <section class="ppl-joinus" aria-label="Join the BioMolE Lab"> <div> <p class="ppl-joinus-title"> We welcome prospective graduate and undergraduate researchers. </p> <p class="ppl-joinus-text"> Research topics, training, and application procedures are described on the Join Us page.<br> <span lang="ko">대학원생 및 학부연구생 지원 안내는 Join Us 페이지에서 확인할 수 있습니다.</span> </p> </div> <a class="ppl-joinus-link" href="/joinus/"> Join Us <span aria-hidden="true">→</span> </a> </section> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Yoo Seong Choi. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+</style> <h2 class="ppl-head"> Principal Investigator <span class="ppl-head-ko" lang="ko">연구책임자</span> </h2> <section class="ppl-pi" aria-label="Principal Investigator"> <img class="ppl-pi-photo" src="/assets/img/prof_pic.jpg" alt="Portrait of Prof. Yoo Seong Choi" width="800" height="1000"> <div> <p class="ppl-pi-name"> Yoo Seong Choi <span class="ppl-name-ko" lang="ko">최유성</span> </p> <p class="ppl-pi-role"> Professor, Department of Chemical Engineering and Applied Chemistry<br> Chungnam National University<br> <a href="mailto:biochoi@cnu.ac.kr">biochoi@cnu.ac.kr</a> </p> <p class="ppl-pi-bio"> Prof. Choi's research examines how molecular interactions organize biomolecules and how these principles can be translated into functional biomaterials, biocatalysis, and bioprocesses. The laboratory integrates protein engineering, quantitative biophysics, synthetic biology, and bioprocess engineering. </p> <nav class="ppl-pi-links" aria-label="Principal investigator links"> <a href="/research/">Research</a> <a href="/publications/">Publications</a> <a href="/contact/">Contact</a> </nav> </div> </section> <h2 class="ppl-head"> Curriculum Vitae <span class="ppl-head-ko" lang="ko">주요 이력</span> </h2> <div class="ppl-cv"> <section> <h3> Education<span class="ppl-cv-ko" lang="ko">학력</span> </h3> <ul> <li> <span class="ppl-cv-when">2000.03 – 2005.08</span> <span class="ppl-cv-what">Ph.D., Chemical Engineering</span> <span class="ppl-cv-where">School of Chemical Engineering, Seoul National University</span> </li> <li> <span class="ppl-cv-when">1998.03 – 2000.02</span> <span class="ppl-cv-what">M.S., Chemical Engineering</span> <span class="ppl-cv-where">Seoul National University</span> </li> <li> <span class="ppl-cv-when">1994.03 – 1998.02</span> <span class="ppl-cv-what">B.S., Chemical Engineering</span> <span class="ppl-cv-where">Seoul National University</span> </li> </ul> </section> <section> <h3> Professional Experience<span class="ppl-cv-ko" lang="ko">경력</span> </h3> <ul> <li> <span class="ppl-cv-when">2019.09 – present</span> <span class="ppl-cv-what">Professor</span> <span class="ppl-cv-where">Dept. of Chemical Engineering &amp; Applied Chemistry, Chungnam National University</span> </li> <li> <span class="ppl-cv-when">2015.09 – 2019.08</span> <span class="ppl-cv-what">Associate Professor</span> <span class="ppl-cv-where">Dept. of Chemical Engineering &amp; Applied Chemistry, Chungnam National University</span> </li> <li> <span class="ppl-cv-when">2017.02 – 2018.02</span> <span class="ppl-cv-what">Visiting Professor</span> <span class="ppl-cv-where">Dept. of Biology, University of Texas at Arlington, USA</span> </li> <li> <span class="ppl-cv-when">2011.08 – 2015.08</span> <span class="ppl-cv-what">Assistant Professor</span> <span class="ppl-cv-where">Dept. of Chemical Engineering &amp; Applied Chemistry, Chungnam National University</span> </li> <li> <span class="ppl-cv-when">2008.03 – 2011.08</span> <span class="ppl-cv-what">Research Assistant Professor</span> <span class="ppl-cv-where">Dept. of Chemical Engineering, Pohang University of Science &amp; Technology (POSTECH)</span> </li> <li> <span class="ppl-cv-when">2006.03 – 2008.03</span> <span class="ppl-cv-what">Postdoctoral Research Associate</span> <span class="ppl-cv-where">Dept. of Chemical &amp; Biomolecular Engineering, University of Illinois at Urbana-Champaign, USA</span> </li> <li> <span class="ppl-cv-when">2005.10 – 2006.10</span> <span class="ppl-cv-what">Postdoctoral Researcher</span> <span class="ppl-cv-where">Institute of Molecular Biology &amp; Genetics, S. Korea</span> </li> </ul> </section> </div> <h2 class="ppl-head"> Graduate Students <span class="ppl-head-ko" lang="ko">대학원생</span> </h2> <div class="ppl-grid"> <article class="ppl-member"> <img class="ppl-photo" src="/assets/img/members/example-graduate.jpg" alt="Portrait of Example Graduate Student" loading="lazy" decoding="async" width="800" height="1000" style="object-position: center 25%;"> <p class="ppl-name"> Example Graduate Student<span class="ppl-name-ko" lang="ko">예시 대학원생</span> </p> <p class="ppl-role"> Ph.D. Student </p> <p class="ppl-topic">Sequence-dependent coacervation of intrinsically disordered proteins</p> </article> </div> <h2 class="ppl-head"> Undergraduate Researchers <span class="ppl-head-ko" lang="ko">학부연구생</span> </h2> <div class="ppl-grid"> <article class="ppl-member"> <img class="ppl-photo" src="/assets/img/members/example-undergraduate.jpg" alt="Portrait of Example Undergraduate Researcher" loading="lazy" decoding="async" width="800" height="1000" style="object-position: center 25%;"> <p class="ppl-name"> Example Undergraduate Researcher<span class="ppl-name-ko" lang="ko">예시 학부연구생</span> </p> <p class="ppl-role"> Undergraduate Researcher </p> <p class="ppl-topic">Interfacial characterization of protein condensates</p> </article> </div> <section class="ppl-joinus" aria-label="Join the BioMolE Lab"> <div> <p class="ppl-joinus-title"> We welcome prospective graduate and undergraduate researchers. </p> <p class="ppl-joinus-text"> Research topics, training, and application procedures are described on the Join Us page.<br> <span lang="ko">대학원생 및 학부연구생 지원 안내는 Join Us 페이지에서 확인할 수 있습니다.</span> </p> </div> <a class="ppl-joinus-link" href="/joinus/"> Join Us <span aria-hidden="true">→</span> </a> </section> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Yoo Seong Choi. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
