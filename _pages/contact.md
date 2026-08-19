@@ -4,7 +4,7 @@ title: Contact
 permalink: /contact/
 description: Contact information and directions to the BioMolE Lab at Chungnam National University.
 nav: true
-nav_order: 6
+nav_order: 7
 ---
 
 <style>
