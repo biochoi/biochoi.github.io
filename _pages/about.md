@@ -338,9 +338,9 @@ latest_posts:
   From molecular interactions and biomolecular organization to catalysis, transport, and bioprocesses.
 </div>
 
-At the **BioMolE Lab**, we study and engineer biological function at multiple levels—from protein sequences and molecular interactions to biomolecular assemblies, cells, and bioprocesses. We investigate how sequence-dependent molecular interactions drive coacervation, phase separation, and interfacial reorganization, and how the resulting microenvironments affect biomolecular organization and catalytic activity. We also discover and engineer enzymes for biocatalysis and examine how interfacial and mass-transfer processes influence biological systems and bioprocess performance.
+At the **BioMolE Lab**, we study how protein sequences, structures, and molecular interactions shape assembly and function. A central focus is how sequence-dependent molecular interactions drive coacervation, phase separation, and interfacial reorganization, and how the resulting microenvironments affect biomolecular organization and catalytic activity.
 
-By combining protein engineering, quantitative biophysics, synthetic biology, and bioprocess engineering, we develop biomolecular platforms for functional biomaterials and biocatalysis and improve bioprocess efficiency. Our goal is to understand the underlying mechanisms, use that knowledge for rational design, and develop useful technologies.
+We apply these insights to design biomolecular condensates and engineer enzymes for functional biomaterials, compartmentalized biocatalysis, and bioprocess applications.
 
 <section markdown="0" class="home-research" aria-labelledby="home-research-title">
   <h2 class="home-head" id="home-research-title">
@@ -363,8 +363,8 @@ By combining protein engineering, quantitative biophysics, synthetic biology, an
         Enzyme Discovery &amp; Engineering
       </h3>
       <p class="home-area-desc">
-        Discovering and engineering enzymes for selective biocatalysis,
-        biomaterials, and sensing.
+        Discovering and engineering enzymes for selective biocatalysis and
+        compartmentalized reaction systems.
       </p>
     </a>
 
