@@ -45,7 +45,7 @@ latest_posts:
 
   @media (min-width: 768px) {
     .profile {
-      margin-top: 1.5rem;
+      margin-top: 1.6rem;
     }
 
     .profile .more-info {
@@ -338,9 +338,25 @@ latest_posts:
   From molecular interactions and biomolecular organization to catalysis, transport, and bioprocesses.
 </div>
 
-At the **BioMolE Lab**, we study how protein sequences, structures, and molecular interactions shape assembly and function. A central focus is how sequence-dependent molecular interactions drive coacervation, phase separation, and interfacial reorganization, and how the resulting microenvironments affect biomolecular organization and catalytic activity.
+At the **BioMolE Lab**, we study how protein sequences and the resulting molecular interactions influence protein function, biomolecular condensate formation, and interfacial reorganization. We also examine how the resulting microenvironments affect molecular organization and enzyme activity.
 
-We apply these insights to design biomolecular condensates and engineer enzymes for functional biomaterials, compartmentalized biocatalysis, and bioprocess applications.
+Based on this understanding, we develop functional biomaterials and engineer enzymes for biocatalysis and bioprocess applications.
+
+<p
+  lang="ko"
+  style="
+    margin: 1.25rem 0 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--global-theme-color, #1a4d3e);
+    color: var(--global-text-color);
+    font-size: 0.96rem;
+    line-height: 1.8;
+    word-break: keep-all;
+  "
+>
+  충남대학교 생체분자공학연구실은 단백질 서열과 이에 따른 분자 간 상호작용이 단백질 기능, 생체분자 응축, 계면 재구성에 미치는 영향을 연구합니다.
+  이를 바탕으로 기능성 생체소재와 생촉매를 개발하고, 생물공정 분야로 응용을 확장하고 있습니다.
+</p>
 
 <section markdown="0" class="home-research" aria-labelledby="home-research-title">
   <h2 class="home-head" id="home-research-title">
