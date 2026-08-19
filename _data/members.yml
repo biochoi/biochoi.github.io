@@ -43,6 +43,8 @@ undergraduate:
   - name_en: "Hyeonsu Park"
     name_ko: "박현수"
     role: "Undergraduate Researcher"
+    image: "hyeonsu-park.jpg"
+    photo_position: "center center"
     initials: "HP"
 
   - name_en: "Hojoong Kim"
