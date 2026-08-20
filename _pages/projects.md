@@ -105,7 +105,7 @@ BioMolE Lab studies how molecular interactions affect biomolecular organization,
 
 **Selected Publications**
 
-- Acidic Low-Complexity Domain Truncation Modulates Coacervation and Cationic Protein-Induced Morphological Reorganization — *Colloids and Surfaces B: Biointerfaces* (2026), under revision
+- Acidic Low-Complexity Domain Truncation Modulates Coacervation and Cationic Protein-Induced Morphological Reorganization — (2026), under revision
 - Spontaneous Transition of Spherical Coacervate to Vesicle-Like Compartment — *Advanced Science* (2024)
 - Control of Nacre Biomineralization by Pif80 in Pearl Oyster — *Science Advances* (2017)
 
