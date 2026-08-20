@@ -60,11 +60,7 @@
 .highlight .kr {
   color: #000000;
   font-weight: bold;
-} /* Keyword.Reserved */
-.highlight .kt {
-  color: #445588;
-  font-weight: bold;
-} /* Keyword.Type */
+} /* Keyword.Reserved */ /* Keyword.Type */
 .highlight .m {
   color: #009999;
 } /* Literal.Number */

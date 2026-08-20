@@ -75,11 +75,7 @@
 .highlight .kr {
   color: #6ab825;
   font-weight: bold;
-} /* Keyword.Reserved */
-.highlight .kt {
-  color: #6ab825;
-  font-weight: bold;
-} /* Keyword.Type */ /* Literal.Date */
+} /* Keyword.Reserved */ /* Keyword.Type */ /* Literal.Date */
 .highlight .m {
   color: #3677a9;
 } /* Literal.Number */
