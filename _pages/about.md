@@ -57,6 +57,17 @@ latest_posts:
     .post article > .clearfix > p {
       overflow: hidden;
     }
+    
+    .home-brand {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .home-brand > div {
+      margin-top: 0;
+    }
   }
 
   /* ══════════════════════════════════════════════════════════
@@ -318,13 +329,13 @@ latest_posts:
   }
 </style>
 
-<div markdown="0" style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
+<div markdown="0" class="home-brand" style="margin-bottom: 2rem;">
   <img
     src="/assets/img/Logo.png"
     alt="BioMolE Lab Logo"
-    style="width: 100%; max-width: 230px; height: auto; background: #ffffff; padding: 0.6rem; border-radius: 6px;"
+    style="display: block; width: 100%; max-width: 230px; height: auto; background: #ffffff; padding: 0.6rem; border-radius: 6px;"
   >
-  <div style="font-size: 1.05rem; color: var(--global-text-color-light); line-height: 1.5; flex: 1; min-width: 12rem;">
+  <div style="font-size: 1.05rem; color: var(--global-text-color-light); line-height: 1.5; margin-top: 0.9rem;">
     Dept. of Chem. Eng. &amp; Appl. Chem.<br>
     Chungnam National University
   </div>
