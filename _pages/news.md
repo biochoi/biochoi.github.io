@@ -55,6 +55,18 @@ nav_order: 4
     transform: translateY(-3px);
   }
 
+  .notice-logo {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 1.8rem;
+    padding: 0.7rem 0.9rem;
+    border-radius: 6px;
+    background: #ffffff;
+    box-sizing: border-box;
+  }
+
   .notice-poster:focus-visible {
     outline: 3px solid rgba(26, 77, 62, 0.25);
     outline-offset: 3px;
@@ -292,6 +304,11 @@ nav_order: 4
       width: 100%;
       max-width: 245px;
       justify-self: center;
+    }
+
+    .notice-logo {
+      max-width: 100%;
+      margin-top: 1.4rem;
     }
 
     .notice-content {
