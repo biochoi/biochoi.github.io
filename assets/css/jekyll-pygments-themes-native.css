@@ -102,20 +102,14 @@
 .highlight .nn {
   color: #447fcf;
   text-decoration: underline;
-} /* Name.Namespace */
-.highlight .nx {
-  color: #d0d0d0;
-} /* Name.Other */
+} /* Name.Namespace */ /* Name.Other */
 .highlight .py {
   color: #d0d0d0;
 } /* Name.Property */
 .highlight .nt {
   color: #6ab825;
   font-weight: bold;
-} /* Name.Tag */
-.highlight .nv {
-  color: #40ffff;
-} /* Name.Variable */
+} /* Name.Tag */ /* Name.Variable */
 .highlight .ow {
   color: #6ab825;
   font-weight: bold;
@@ -140,10 +134,7 @@
 } /* Literal.String.Heredoc */
 .highlight .si {
   color: #ed9d13;
-} /* Literal.String.Interpol */ /* Literal.String.Other */ /* Literal.String.Regex */
-.highlight .s1 {
-  color: #ed9d13;
-} /* Literal.String.Single */ /* Literal.String.Symbol */
+} /* Literal.String.Interpol */ /* Literal.String.Other */ /* Literal.String.Regex */ /* Literal.String.Single */ /* Literal.String.Symbol */
 .highlight .bp {
   color: #24909d;
 } /* Name.Builtin.Pseudo */ /* Name.Variable.Class */ /* Name.Variable.Global */
