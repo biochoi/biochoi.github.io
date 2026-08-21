@@ -369,7 +369,14 @@ nav_order: 4
     미래 바이오 산업 혁신의 중심에서 성장할<br>
     열정 있는 대학원생을 모집합니다.
   </h2>
+
+  <img
+    class="notice-logo"
+    src="{{ '/assets/img/synbridge-logo.svg' | relative_url }}"
+    alt="SYN-BRIDGE 합성생물학 초광역권 융합인재양성사업단 로고"
+  >
 </div>
+
 </section>
 
 <section aria-labelledby="latest-news-title">
