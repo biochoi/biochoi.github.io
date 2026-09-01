@@ -71,8 +71,7 @@ undergraduate:
     photo_position: "center center"
     initials: "SH"
 
-  # 영문 표기는 본인 확인 후 확정 (Yeonje / Yeonjae, Jung / Jeong 등)
-  - name_en: "Yeonje Jung"
+  - name_en: "Yeonje Chung"
     name_ko: "정연제"
     role: "Undergraduate Researcher"
     topic: "Biomolecular engineering research"
