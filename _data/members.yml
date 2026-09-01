@@ -58,29 +58,25 @@ undergraduate:
   - name_en: "Hojoong Kim"
     name_ko: "김호중"
     role: "Undergraduate Researcher"
-    topic: "Biomolecular engineering research"
+    topic: "Protein engineering and bioprocess applications"
     image: "h-kim.jpg"
     photo_position: "center center"
     initials: "HK"
 
-  # Add the two students joining in September 2026 after their
-  # English names and photographs are confirmed.
-  #
-  # - name_en: "English Name"
-  #   name_ko: "한글 이름"
-  #   role: "Undergraduate Researcher"
-  #   topic: "Biomolecular engineering research"
-  #   image: "english-name.jpg"
-  #   photo_position: "center center"
-  #   initials: "EN"
+  - name_en: "Sohyeon Han"
+    name_ko: "한소현"
+    role: "Undergraduate Researcher"
+    topic: "Biomolecular engineering research"
+    image: "sohyeon-han.jpg"
+    photo_position: "center center"
+    initials: "SH"
 
-alumni:
-  # Add alumni records here when needed.
-  #
-  # - name_en: "Example Alumnus"
-  #   name_ko: "예시"
-  #   degree: "M.S."
-  #   year: 2030
-  #   thesis: "Thesis title"
-  #   position: "Current position"
+  # 영문 표기는 본인 확인 후 확정 (Yeonje / Yeonjae, Jung / Jeong 등)
+  - name_en: "Yeonje Jung"
+    name_ko: "정연제"
+    role: "Undergraduate Researcher"
+    topic: "Biomolecular engineering research"
+    image: "yeonje-jung.jpg"
+    photo_position: "center center"
+    initials: "YJ"
 
