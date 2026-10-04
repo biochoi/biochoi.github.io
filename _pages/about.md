@@ -43,6 +43,14 @@ latest_posts:
     margin: 0;
   }
 
+  /* 모바일에서는 프로필 영역(사진 + 이름·직위·이메일)을 숨깁니다.
+     PC(768px 이상)에서는 기존과 동일하게 표시됩니다. */
+  @media (max-width: 767.98px) {
+    .profile {
+      display: none !important;
+    }
+  }
+
   @media (min-width: 768px) {
     .profile {
       margin-top: 5rem;
