@@ -71,11 +71,10 @@ undergraduate:
     photo_position: "center center"
     initials: "SH"
 
-  - name_en: "Yeonje Chung"
-    name_ko: "정연제"
+  - name_en: "Ihyeon Jeong"
+    name_ko: "정이현"
     role: "Undergraduate Researcher"
     topic: "Biomolecular engineering research"
-    image: "yeonje-jung.jpg"
+    image: "ihyeon-jeong.jpg"
     photo_position: "center center"
-    initials: "YC"
-
+    initials: "IJ"
